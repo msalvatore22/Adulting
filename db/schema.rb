@@ -27,6 +27,17 @@ ActiveRecord::Schema.define(version: 2018_05_29_164502) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+ActiveRecord::Schema.define(version: 2018_05_29_150521) do
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title"
+    t.string "topic"
+    t.string "content"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+
   end
 
 end
