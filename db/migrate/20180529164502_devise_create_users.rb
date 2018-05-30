@@ -33,7 +33,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       # t.datetime :locked_at
 
       ## Userable
-      t.references :userable, polymorphic: true, index: true
+      # t.references :userable, polymorphic: true, index: true
 
       t.timestamps null: false
     end
