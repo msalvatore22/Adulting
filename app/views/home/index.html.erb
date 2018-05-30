@@ -1,12 +1,14 @@
-  <div style="background: url(img/car.jpg); background-size: cover; background-position: center center" class="hero">
-    </div>
+  <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe> %>
+ </div>
 
-<h3>Latest from Adulting</h3>
+<h3 class="topic-head">Latest from Adulting</h3>
 <div class="first-deck card-deck">
   <div class="card border-primary" style="width: 18rem">
-    <img class="card-img-top" src="/images/car/jpg" alt="Card image cap">
+    <img class="card-img-top" src="/assets/car.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="topic card-title">Finance</h5>
+       <%= link_to "Finances", finances_path %>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     </div>
     <div class="card-footer">
@@ -14,9 +16,10 @@
     </div>
   </div>
   <div class="card border-primary" style="width: 18rem">
-    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+    <img class="card-img-top" src="/assets/car.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="topic card-title">Housing</h5>
+       <%= link_to "Housing", housings_path %>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
     </div>
     <div class="card-footer">
@@ -24,9 +27,10 @@
     </div>
   </div>
   <div class="card border-primary" style="width: 18rem">
-    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+    <img class="card-img-top" src="/assets/car.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="topic card-title">Cars</h5>
+       <%= link_to "Cars", cars_path %>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
     </div>
     <div class="card-footer">
@@ -37,9 +41,10 @@
 <br>
 <div class="second-deck card-deck">
   <div class="card border-primary" style="width: 18rem">
-    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+    <img class="card-img-top" src="/assets/antique.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="topic card-title">Travel</h5>
+      <%= link_to "Travel", travels_path %>
       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     </div>
     <div class="card-footer">
@@ -47,9 +52,10 @@
     </div>
   </div>
   <div class="card border-primary" style="width: 18rem">
-    <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+    <img class="card-img-top" src="/assets/car.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="topic card-title">Technology</h5>
+      <%= link_to "Technology", technologies_path %>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
     </div>
     <div class="card-footer">
@@ -57,10 +63,11 @@
     </div>
   </div>
   <div class="card border-primary" style="width: 18rem">
-    <img class="card-img-top" src="images/car.jpg/">
+    <img class="card-img-top" src="/assets/car.jpg">
     <div class="card-body">
       <h5 class="topic card-title">Lifestyle</h5>
-      <p class="card-text overlay">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <%= link_to "Lifestyle", lifestyles_path %>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
     </div>
     <div class="card-footer">
       <small class="text-muted">Last updated 3 mins ago</small>
