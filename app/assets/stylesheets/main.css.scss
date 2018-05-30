@@ -4,6 +4,10 @@
 
 @import 'bootstrap';
 
+body {
+	background-image: url(image.car.jpg)
+}
+
 .first-deck, .second-deck {
 	padding-left: 50px;
 	padding-right: 50px;
@@ -35,12 +39,6 @@
 	-ms-transform: translate(-50%, -50%);
 	text-align: center;
   }
-
-  <div class="container">
-  <img src="img_avatar.png" alt="Avatar" class="image">
-  <div class="overlay">
-    <div class="text">Hello World</div>
-  </div>
 
 .topic {
 	font-family: Arial, Helvetica, sans-serif;
