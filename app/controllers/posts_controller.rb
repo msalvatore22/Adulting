@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
+    @user = User.find_by(params[:id])
   end
 
   def show
@@ -43,38 +44,28 @@ class PostsController < ApplicationController
   end
 
   def car_posts
-    @post = Post.new
-    @user = User.find_by(params[:id])
-
-    @post = Post.new(post_params)
-    @user = User.find_by(params[:id])
-
-    if @post.save
-      redirect_to :action => 'index'
-    else
-      render :action => 'new'
-    end
+    @posts = Post.all
 
   end
 
   def finance_posts
-
+    @posts = Post.all
   end
 
   def housing_posts
-
+    @posts = Post.all
   end
 
   def lifestyle_posts
-
+    @posts = Post.all
   end
 
   def technology_posts
-
+    @posts = Post.all
   end
 
   def travel_posts
-
+    @posts = Post.all
   end
 
   private
