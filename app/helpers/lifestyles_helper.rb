@@ -1,0 +1,2 @@
+module LifestylesHelper
+end
