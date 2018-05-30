@@ -21,25 +21,33 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Finanace <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Housing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Cars</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Travel</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Technology</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Social Life</a>
-      </li>
+   <ul class="navbar-nav mr-auto">
+     <li class="nav-item active">
+       <%= link_to "Home", root_path %>
+     </li>
+     <li class="nav-item active">
+       <%= link_to "Finances", finances_path %>
+     </li>
+     <li class="nav-item">
+       <%= link_to "Housing", housings_path %>
+     </li>
+     <li class="nav-item">
+       <%= link_to "Cars", cars_path %>
+     </li>
+     <li class="nav-item">
+       <%= link_to "Travel", travels_path %>
+     </li>
+     <li class="nav-item">
+       <%= link_to "Technology", technologies_path %>
+     </li>
+     <li class="nav-item">
+       <%= link_to "Lifestyle", lifestyles_path %>
+     </li>
+     <li class="nav-item">
+       <%= link_to "Create Post", new_post_path %>
+     </li>
+     
+
     
      
     </ul>

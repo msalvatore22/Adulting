@@ -1,30 +1,6 @@
-<form>
-<div class="form-group">
-    <label for="exampleFormControlSelect2">Select Topic</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
-      <option>Finanance</option>
-      <option>Housing</option>
-      <option>Cars</option>
-      <option>Travel</option>
-      <option>Technology</option>
-      <option>Social Life</option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Title</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter title of the post here...">
-  </div>
-
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Content</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter content of the post here..."></textarea>
-  </div>
-
-  
-  <div class="form-group">
-    <label for="exampleFormControlFile1">Example file input</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-  </div>
-
-</form>
+<%= bootstrap_form_with(model: @post, local: true) do |f| %>
+<%= f.text_field :title, label: "Title:" %>
+<%= f.select :topic, ["Finance", "Housing", "Cars", "Travel", "Technology", "Lifestyle"], label: "Topic:" %>
+<%= f.text_area :content, label: "Content:" %>
+<%= f.submit "Create Post" %>
+<% end %>
