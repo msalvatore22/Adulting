@@ -4,15 +4,22 @@
 
 @import 'bootstrap';
 
-body {
-	background-image: url(image.car.jpg)
-}
+// body {
+	// background-image: url(image/car.jpg)
+	// background-image: url(car.jpg);
+
+// }
 
 .first-deck, .second-deck {
 	padding-left: 50px;
 	padding-right: 50px;
 }
 
+.topic-head {
+	padding-left: 50px;
+	padding-top: 30px;
+	font-family: 'Julius Sans One', sans-serif;
+}
 .overlay {
 	position: absolute;
 	bottom: 0;
