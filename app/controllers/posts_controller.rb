@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @user = User.find_by(params[:id])
   end
 
   def edit
@@ -17,6 +18,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @user = User.find_by(params[:id])
 
     if @post.save
       redirect_to :action => 'index'
@@ -38,6 +40,41 @@ class PostsController < ApplicationController
   def destroy
     Post.find(params[:id]).destroy
     redirect_to :action => 'index'
+  end
+
+  def car_posts
+    @post = Post.new
+    @user = User.find_by(params[:id])
+
+    @post = Post.new(post_params)
+    @user = User.find_by(params[:id])
+
+    if @post.save
+      redirect_to :action => 'index'
+    else
+      render :action => 'new'
+    end
+
+  end
+
+  def finance_posts
+
+  end
+
+  def housing_posts
+
+  end
+
+  def lifestyle_posts
+
+  end
+
+  def technology_posts
+
+  end
+
+  def travel_posts
+
   end
 
   private
