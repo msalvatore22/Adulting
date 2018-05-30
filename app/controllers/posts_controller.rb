@@ -44,28 +44,28 @@ class PostsController < ApplicationController
   end
 
   def car_posts
-    @posts = Post.all
+    @posts = Post.where(topic: 'Cars').all
 
   end
 
   def finance_posts
-    @posts = Post.all
+    @posts = Post.where(topic: 'Finance').all
   end
 
   def housing_posts
-    @posts = Post.all
+    @posts = Post.where(topic: 'Housing').all
   end
 
   def lifestyle_posts
-    @posts = Post.all
+    @posts = Post.where(topic: 'Lifestyle').all
   end
 
   def technology_posts
-    @posts = Post.all
+    @posts = Post.where(topic: 'Technology').all
   end
 
   def travel_posts
-    @posts = Post.all
+    @posts = Post.where(topic: 'Travel').all
   end
 
   private
