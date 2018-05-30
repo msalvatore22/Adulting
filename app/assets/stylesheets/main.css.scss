@@ -3,3 +3,64 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import 'bootstrap';
+
+.first-deck, .second-deck {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #008CBA;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: .5s ease;
+  }
+  
+  .first-deck:hover .overlay {
+	height: 100%;
+  }
+  
+  .text {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+  }
+
+  <div class="container">
+  <img src="img_avatar.png" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Hello World</div>
+  </div>
+
+.topic {
+	font-family: Arial, Helvetica, sans-serif;
+}
+// .ci-all-content-wrap.ci-style-3 {
+// 	padding: 5%;
+// 	background-repeat: no-repeat; 
+// 	background-position: center center;
+// }
+// .ci-style-3 .ci-textcontent-wrap {
+// 	padding: 8%;
+// }
+// .et_pb_post .ci-style-3 h2, .ci-style-3 h2 {
+// 	text-align: center;
+// 	margin-top: 0;
+// }
+// .ci-style-3 h2:after {
+// 	margin: 8px auto 0;
+// }
+// .et_pb_post .ci-style-3 .post-meta, #left-area .et_pb_post .ci-style-3 .post-meta {
+// 	margin-top: 0;
+// 	text-align: center;
+// }
