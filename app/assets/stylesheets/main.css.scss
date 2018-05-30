@@ -3,3 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import 'bootstrap';
+
+.ci-all-content-wrap.ci-style-3 {
+	padding: 5%;
+	background-repeat: no-repeat; 
+	background-position: center center;
+}
+.ci-style-3 .ci-textcontent-wrap {
+	padding: 8%;
+}
+.et_pb_post .ci-style-3 h2, .ci-style-3 h2 {
+	text-align: center;
+	margin-top: 0;
+}
+.ci-style-3 h2:after {
+	margin: 8px auto 0;
+}
+.et_pb_post .ci-style-3 .post-meta, #left-area .et_pb_post .ci-style-3 .post-meta {
+	margin-top: 0;
+	text-align: center;
+}
