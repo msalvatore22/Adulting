@@ -10,13 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_29_193608) do
-
-  create_table "posts", force: :cascade do |t|
-    t.string "title"
-    t.string "topic"
-    t.string "content"
-  end
+ActiveRecord::Schema.define(version: 2018_05_29_204008) do
 
   create_table "comments", force: :cascade do |t|
     t.string "content"
@@ -26,12 +20,6 @@ ActiveRecord::Schema.define(version: 2018_05_29_193608) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "profiles", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "username"
-  end
-  
   create_table "likes", force: :cascade do |t|
     t.integer "post_id"
     t.integer "user_id"
@@ -44,6 +32,14 @@ ActiveRecord::Schema.define(version: 2018_05_29_193608) do
     t.string "topic"
     t.string "content"
     t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
