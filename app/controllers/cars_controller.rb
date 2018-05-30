@@ -1,5 +1,6 @@
 class CarsController < ApplicationController
   def index
+    @post = Post.all
   end
 
   def show
