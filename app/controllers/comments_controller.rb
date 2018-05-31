@@ -1,35 +1,35 @@
 class CommentsController < ApplicationController
   def index
-    @comments = comment.all
+    @comments = Comment.all
     @user = User.find_by(params[:id])
   end
 
   def show
-    @comment = comment.find(params[:id])
+    @comment = Comment.find(params[:id])
   end
 
   def new
-    @comment = comment.new
+    @comment = Comment.new
     @user = User.find_by(params[:id])
   end
 
   def edit
-    @comment = comment.find(params[:id])
+    @comment = Comment.find(params[:id])
   end
 
   def create
-    @comment = comment.new(comment_params)
+    @comment = Comment.new(comment_params)
     @user = User.find_by(params[:id])
 
     if @comment.save
-      redirect_to :action => 'index'
+      redirect_to posts_url
     else
       render :action => 'new'
     end
   end
 
   def update
-    @comment = comment.find(params[:id])
+    @comment = Comment.find(params[:id])
 	
     if @comment.update_attributes(comment_params)
        redirect_to :action => 'show', :id => @comment
@@ -39,7 +39,13 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    comment.find(params[:id]).destroy
+    Comment.find(params[:id]).destroy
     redirect_to :action => 'index'
+  end
+
+  private
+
+  def comment_params
+    params.require(:comment).permit(:content, :user_id, :post_id)
   end
 end

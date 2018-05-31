@@ -1,27 +1,49 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
+    @post_id = Post.find_by(params[:id])
+
     @user = User.find_by(params[:id])
+
+    @comments = Comment.all
+    @comment = Comment.new
+  
+    
   end
 
   def show
     @post = Post.find(params[:id])
+
+
   end
 
   def new
     @post = Post.new
+
     @user = User.find_by(params[:id])
+
   end
 
   def edit
     @post = Post.find(params[:id])
+
+
   end
 
   def create
     @post = Post.new(post_params)
+
     @user = User.find_by(params[:id])
 
+    @comment = Comment.new(comment_params)
+
     if @post.save
+      redirect_to :action => 'index'
+    else
+      render :action => 'new'
+    end
+
+    if @comment.save
       redirect_to :action => 'index'
     else
       render :action => 'new'
@@ -40,6 +62,9 @@ class PostsController < ApplicationController
 
   def destroy
     Post.find(params[:id]).destroy
+    redirect_to :action => 'index'
+
+    Comment.find(params[:id]).destroy
     redirect_to :action => 'index'
   end
 
@@ -72,5 +97,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :topic, :content, :user_id)
+  end
+
+  def comment_params
+    params.require(:comment).permit(:content, :user_id, :post_id)
   end
 end
