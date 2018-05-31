@@ -6,6 +6,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
  
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -14,57 +20,91 @@
  
   <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Adulting</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+<div id="flipkart-navbar" style="background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); box-shadow: 5px 5px 3px grey;">
+    <div class="container">
+        <div class="row row1">
+            <ul class="largenav pull-right">
+                <li class="upper-links"><%= link_to "Finances", posts_finance_path, class: "links" %></li>
+                <li class="upper-links"><%= link_to "Housing", posts_housing_path, class: "links" %></li>
+                <li class="upper-links"><%= link_to "Cars", posts_cars_path, class: "links" %></li>
+                <li class="upper-links"> <%= link_to "Travel", posts_travel_path, class: "links" %></li>
+                <li class="upper-links"> <%= link_to "Technology", posts_technology_path, class: "links" %></li>
+                <li class="upper-links">   <%= link_to "Lifestyle", posts_lifestyle_path, class: "links" %></li>
+                <li class="upper-links">
+                </li>
+                <li class="upper-links dropdown"><a class="links" href="http://clashhacks.in/">Posts</a>
+                    <ul class="dropdown-menu">
+                        <li class="profile-li"><%= link_to "New", new_post_path, class: "links" %></li>
+                    
+                    </ul>
+                </li>
+
+                   <li class="upper-links dropdown"><a class="links" href="http://clashhacks.in/">Account Settings</a>
+                    <ul class="dropdown-menu">
+                         <li class="profile-li"><%= link_to "View Profile", posts_lifestyle_path, class: "links" %></li>
+                        <li class="profile-li"><%= link_to "Account Settings", posts_lifestyle_path, class: "links" %></li>
+                        <li class="profile-li"><%= link_to "Logout", posts_lifestyle_path, class: "links" %></li>
+            
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="row row2">
+            <div class="col-sm-2">
+                <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰ Adulting</span></h2>
+                <h1 style="margin:0px;"><span class="largenav">Adulting</span></h1>
+            </div>
+            <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
+                <div class="row">
+                    <input class="flipkart-navbar-input col-xs-11" type="" placeholder="Search for Topics, Users and more" name="">
+                    <button class="flipkart-navbar-button col-xs-1">
+                        <svg width="15px" height="15px">
+                            <path d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 "></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+       <!--<div class="container">
+  <button class="btn btn-default btn-sm btn-link links" style="font-size:30px;">
+    <span class="glyphicon glyphicon-bullhorn"></span>
   </button>
+  <span class="badge badge-notify">3</span>
+</div>-->
+        </div>
+    </div>
+</div>
+<div id="mySidenav" class="sidenav">
+    <div class="container" style="background-color: #2874f0; padding-top: 10px;">
+        <span class="sidenav-heading">Home</span>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    </div>
+    <a href="http://clashhacks.in/">Link</a>
+    <a href="http://clashhacks.in/">Link</a>
+    <a href="http://clashhacks.in/">Link</a>
+    <a href="http://clashhacks.in/">Link</a>
+</div>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-   <ul class="navbar-nav mr-auto">
-     <li class="nav-item active">
-       <%= link_to "Home", root_path %>
-     </li>
-     <li class="nav-item active">
-       <%= link_to "Finances", posts_finance_path %>
-     </li>
-     <li class="nav-item">
-       <%= link_to "Housing", posts_housing_path %>
-     </li>
-     <li class="nav-item">
-       <%= link_to "Cars", posts_cars_path %>
-     </li>
-     <li class="nav-item">
-       <%= link_to "Travel", posts_travel_path %>
-     </li>
-     <li class="nav-item">
-       <%= link_to "Technology", posts_technology_path %>
-     </li>
-     <li class="nav-item">
-       <%= link_to "Lifestyle", posts_lifestyle_path %>
-     </li>
-     <li class="nav-item">
-       <%= link_to "Create Post", new_post_path %>
-     </li>
-     <li class="nav-item">
-       <%= link_to "All Posts", posts_path %>
-     </li>
-
-    
-     
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+<%= yield %>
 
 
- <%= yield %>
+
+
+
+
+
+
+
+
+ <li class="upper-links"><%= link_to "Finances", posts_finance_path, class: "links" %></li>
+                <li class="upper-links"><%= link_to "Housing", posts_housing_path, class: "links" %></li>
+                <li class="upper-links"><%= link_to "Cars", posts_cars_path, class: "links" %></li>
+                <li class="upper-links"> <%= link_to "Travel", posts_travel_path, class: "links" %></li>
+                <li class="upper-links"> <%= link_to "Technology", posts_technology_path, class: "links" %></li>
+                <li class="upper-links">   <%= link_to "Lifestyle", posts_lifestyle_path, class: "links" %></li>
+
 
 <!-- Footer -->
-<footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
+<footer class="page-footer font-small stylish-color-dark pt-4 mt-4" style="background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); color: white;">
 
   <!-- Footer Links -->
   <div class="container text-center text-md-left">
@@ -92,31 +132,10 @@
 
         <ul class="list-unstyled">
           <li>
-            <a href="#!">Finanace</a>
+            <li class="upper-links"><%= link_to "Finances", posts_finance_path, class: "links" %></li>
           </li>
           <li>
-            <a href="#!">Housing</a>
-          </li>
-         
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 mx-auto">
-
-        <!-- Links -->
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4"></h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Cars</a>
-          </li>
-          <li>
-            <a href="#!">Travel</a>
+            <li class="upper-links"><%= link_to "Housing", posts_housing_path, class: "links" %></li>
           </li>
          
         </ul>
@@ -134,10 +153,31 @@
 
         <ul class="list-unstyled">
           <li>
-            <a href="#!">Technology</a>
+            <li class="upper-links"><%= link_to "Cars", posts_cars_path, class: "links" %></li>
           </li>
           <li>
-            <a href="#!">Social Life</a>
+            <li class="upper-links"> <%= link_to "Travel", posts_travel_path, class: "links" %></li>
+          </li>
+         
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4"></h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <li class="upper-links"> <%= link_to "Technology", posts_technology_path, class: "links" %></li>
+          </li>
+          <li>
+            <li class="upper-links">   <%= link_to "Lifestyle", posts_lifestyle_path, class: "links" %></li>
           </li>
          
         </ul>
@@ -162,14 +202,15 @@
     <% else %>
       <li class="list-inline-item">
       <h5 class="mb-1">Register for free</h5>
-      <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+      <button type="button" class="btn btn-primary"><%= link_to "Sign Up", new_user_registration_path, class: "nav-link links" %></button>
       </li>
       <li class="list-inline-item">
-      <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+     <button type="button" class="btn btn-secondary"><%= link_to "Login", new_user_session_path, class: "nav-link links" %></button>
       </li>
     <% end %>
   </ul>
   <!-- Call to action -->
+
 
   <hr>
 
@@ -205,7 +246,7 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
+    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> Adulting.com</a>
   </div>
   <!-- Copyright -->
 
