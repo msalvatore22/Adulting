@@ -5,20 +5,14 @@
     <h6 class="card-subtitle mb-2 text-muted">Topic: <%= post.topic %></h6>
     <p class="card-text">Content: <%= post.content %></p>
     <li><%= link_to "View Post", post %></li>
-
-    <% @comments.reverse.each do |comment| %>
+` 
+    <% @this_comments = Comment.where(post_id: post.id) %>
+    <% @this_comments.each do |comment| %>
     <p class="card-text">Comment: <%= comment.content %></p>
     <% end %>
 
     
-    <h6 class="card-subtitle mb-2 text-muted">Leave a comment.</h6>
-    <%= bootstrap_form_for(@comment) do |f| %>
-    <%= f.text_area :content %>
-    <%= f.hidden_field(:post_id, value: "#{@post_id.id}") %>
-    <%= f.hidden_field(:user_id, value: "#{@user.id}") %>
-    <%= f.submit "Comment" %>
-    <% end %>
-
+   
 
   </div>
 </div>
