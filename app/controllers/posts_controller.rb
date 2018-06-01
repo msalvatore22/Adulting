@@ -1,22 +1,31 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
-    @post_id = Post.find_by(params[:id])
-
-    @user = User.find_by(params[:id])
+    
+    @post = Post.find_by(params[:id])
+    @user = current_user
 
     @comments = Comment.all
     @comment = Comment.new
   end
 
   def show
+    
+  
+    @user = current_user
+
+    @comment = Comment.new
     @post = Post.find(params[:id])
     @like_count = Like.where(post_id: params[:id]).count
     @like = Like.new()
+    
   end
 
   def new
     @post = Post.new
+
+    
+
     @user = User.find_by(params[:id])
   end
 
@@ -27,9 +36,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
 
-    @user = User.find_by(params[:id])
+    @user = current_user
 
-    @comment = Comment.new(comment_params)
 
     if @post.save
       redirect_to :action => 'index'
@@ -37,11 +45,6 @@ class PostsController < ApplicationController
       render :action => 'new'
     end
 
-    # if @comment.save
-    #   redirect_to :action => 'index'
-    # else
-    #   render :action => 'new'
-    # end
   end
 
   def update
@@ -58,8 +61,7 @@ class PostsController < ApplicationController
     Post.find(params[:id]).destroy
     redirect_to :action => 'index'
 
-    Comment.find(params[:id]).destroy
-    redirect_to :action => 'index'
+    
   end
 
   def car_posts
@@ -93,7 +95,5 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :topic, :content, :user_id)
   end
 
-  def comment_params
-    params.permit(:content, :user_id, :post_id)
-  end
+
 end

@@ -72,15 +72,24 @@
           <div class="card my-4">
             <h5 class="card-header">Leave a Comment:</h5>
             <div class="card-body">
-              <form>
-                <div class="form-group">
-                  <textarea class="form-control" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+              <%= bootstrap_form_for(@comment) do |f| %>
+              <%= f.text_area :content %>
+              <%= f.hidden_field(:post_id, value: "#{@post.id}")%>
+              <%= f.hidden_field(:user_id, value: "#{current_user.id}") %>
+              <%= f.submit "Comment" %>
+              <% end %>
             </div>
           </div>
 
+
+          <h3> <%= @post.comments.first.content %> </h3>
+
+          <% @post.comments.each do |comment| %>
+          <p class="card-text">Comment: <%= comment.content %></p>
+          <% end %>
+          
+          
+   
           <!-- Single Comment -->
           <div class="media mb-4">
             <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
