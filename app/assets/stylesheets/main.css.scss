@@ -47,30 +47,167 @@
 	text-align: center;
   }
 
+  .newpost {
+      padding-left: 50px;
+      padding-top: 50px;
+  }
 .topic {
 	font-family: Arial, Helvetica, sans-serif;
 }
-// .ci-all-content-wrap.ci-style-3 {
-// 	padding: 5%;
-// 	background-repeat: no-repeat; 
-// 	background-position: center center;
-// }
-// .ci-style-3 .ci-textcontent-wrap {
-// 	padding: 8%;
-// }
-// .et_pb_post .ci-style-3 h2, .ci-style-3 h2 {
-// 	text-align: center;
-// 	margin-top: 0;
-// }
-// .ci-style-3 h2:after {
-// 	margin: 8px auto 0;
-// }
-// .et_pb_post .ci-style-3 .post-meta, #left-area .et_pb_post .ci-style-3 .post-meta {
-// 	margin-top: 0;
-// 	text-align: center;
-// }
 
-
+.pic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.topiko-caro {
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.topiko-caro.ci-style-4 {
+    min-height: 100px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.2), 0 15px 12px rgba(0, 0, 0, 0.1);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.topiko-caro.ci-style-4 {
+    padding: 1.5em;
+    position: relative;
+    z-index: 1;
+	box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+}
+.topiko-caro.ci-style-4 .ci-date {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0.8em;
+	/* background-color: white; */
+}
+.topiko-caro.ci-style-4 .ci-date span {
+	display: block;
+	text-align: center;
+	line-height: 1;
+}
+.topiko-caro.ci-style-4 .ci-day {
+	font-weight: 700;
+	font-size: 24px;
+	text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.18);
+}
+.topiko-caro.ci-style-4 .ci-month {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+.topiko-caro.ci-style-4 .ci-year {
+	font-size: 12px;
+}
+.topiko-caro.ci-style-4 {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% + 1px);
+    -webkit-transform: translateY(calc(40%));
+    transform: translateY(calc(40%));
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.topiko-caro.ci-style-4:hover .ci-textcontent-wrap {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.content_n10s.ci-style-4.format-video .ci-textcontent-wrap.ci-style-4 {
+	/* no hover effect on video post types */
+	-webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.content_n10s.ci-style-4.format-video .ci-more-hover {
+	display: none;
+}
+.topiko-caro.ci-style-4 .entry-title {
+	margin-top: 10px;
+}
+.topiko-caro.ci-style-4 .post-content {
+	height: 50%;
+	margin: 0;
+}
+.topiko-caro.ci-style-4 .ci-more-hover {
+    position: absolute;
+    z-index: 999;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+	background: -webkit-linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 20%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 20%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 20%, rgba(255,255,255,1) 100%);
+	-webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.topiko-caro.ci-style-4:hover .ci-more-hover {
+	-webkit-transform: translateY(25px);
+	transform: translateY(25px);
+}
+.topiko-caro.ci-style-4 .ci-more-hover span {
+	width: 5px;
+    height: 5px;
+    background-color: gray;
+    color: gray;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+}
+.topiko-caro.ci-style-4 .ci-more-hover span::before, 
+.topiko-caro.ci-style-4 .ci-more-hover span::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: currentColor;
+    position: absolute;
+    border-radius: 50%;
+}
+.topiko-caro.ci-style-4 .ci-more-hover span::before {
+	left: -10px;
+}
+.topiko-caro.ci-style-4 .ci-more-hover span::after {
+	right: -10px;
+}
+.topiko-caro.ci-style-4 .ci-comments {
+	float: right;
+}
+.topiko-caro.ci-style-4 .ci-comments::before,
+.topiko-caro.ci-style-4 .ci-comments::after {
+	content: '';
+	display: table;
+}
+.topiko-caro.ci-style-4 .ci-comments::after {
+	clear: both;
+}
+.topiko-caro.ci-style-4 .ci-comments li {
+    height: 60px;
+    position: relative;
+	display: inline-block;
+}
+.topiko-caro.ci-style-4 .ci-comments a::before {
+	display: inline-block;
+	font: normal normal normal 24px/1 ETmodules !important;
+}
+.topiko-caro.ci-style-4 .ci-comments span {
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    font-size: 10px !important;
+    font-weight: 700;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+}
+.topiko-caro.ci-style-4 .ci-extra-comment::before {
+	content: "v";	/*speech bubble*/
+}
 
 
 #flipkart-navbar {

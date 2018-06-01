@@ -7,30 +7,30 @@ class PostsController < ApplicationController
 
     @comments = Comment.all
     @comment = Comment.new
-  
-    
   end
 
   def show
-    @post = Post.find_by(params[:id])
+    
   
     @user = current_user
 
     @comment = Comment.new
-
+    @post = Post.find(params[:id])
+    @like_count = Like.where(post_id: params[:id]).count
+    @like = Like.new()
+    
   end
 
   def new
     @post = Post.new
-    
-    @user = current_user
 
+    
+
+    @user = User.find_by(params[:id])
   end
 
   def edit
     @post = Post.find(params[:id])
-
-
   end
 
   def create
@@ -95,5 +95,5 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :topic, :content, :user_id)
   end
 
-  
+
 end
