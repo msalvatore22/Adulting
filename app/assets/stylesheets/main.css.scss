@@ -20,6 +20,7 @@
 	padding-top: 30px;
 	font-family: 'Julius Sans One', sans-serif;
 }
+
 .overlay {
 	position: absolute;
 	bottom: 0;
@@ -62,6 +63,10 @@
     padding-left: 400px;
 }
 
+.card {
+	width: 30%;
+	margin: 10px 15px 10px 15px;
+} 
 
 .card-img-top {
     object-fit: cover;
@@ -83,15 +88,15 @@
     padding-left: 30px;
     padding-right: 30px;
 }
-.topiko-caro.ci-style-4 {
-    min-height: 100px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.2), 0 15px 12px rgba(0, 0, 0, 0.1);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-}
+// .topiko-caro.ci-style-4 {
+//     min-height: 100px;
+//     position: relative;
+//     overflow: hidden;
+//     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.2), 0 15px 12px rgba(0, 0, 0, 0.1);
+// 	background-size: cover;
+// 	background-repeat: no-repeat;
+// 	background-position: center center;
+// }
 .topiko-caro.ci-style-4 {
     padding: 1.5em;
     position: relative;
