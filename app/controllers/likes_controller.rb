@@ -10,7 +10,6 @@ class LikesController < ApplicationController
     end
   end
 
-
   def destroy
     Like.find(params[:id]).destroy
     redirect_to :action => 'index'
