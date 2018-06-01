@@ -1,12 +1,22 @@
+<div class="container">
+<h1 class="header">Adulting about Finances <%= params[:finance] %></h1>
+<div class="row col-12-sm text-center justify-content-center" style="margin-bottom: 5rem;">
 <% @posts.each do |post| %>
-<div class="row">
-<div class="card" style="width: 18rem;">
+
+<div class="topiko-caro row">
+<div class="d-flex flex-wrap">
+<div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 35rem;">
+<span class="card-body" style="width: 2rem">
+<img class="card-img-top card-body" src="/assets/car.jpg" alt="Card image cap">
+<img class="pic" src="/assets/pic.png" alt="..." class="rounded-circle">
   <div class="card-body">
-    <h5 class="card-title">Title: <%= post.title %></h5>
-    <h6 class="card-subtitle mb-2 text-muted">Topic: <%= post.topic %></h6>
-    <p class="card-text">Content: <%= post.content %></p>
-    
+    <h5 class="card-title"> <%= post.title %></h5>
+    <%# <h6 class="card-subtitle mb-2 text-muted">Topic: <%= post.topic %></h6> 
+    <p class="card-text justify-content"><%= post.content %></p>
+    <a href="#" class="btn btn-primary">Read More</a>
   </div>
 </div>
 </div>
+</div>
 <% end %>
+

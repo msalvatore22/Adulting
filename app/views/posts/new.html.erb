@@ -1,3 +1,4 @@
+
 <%= bootstrap_form_with(model: @post, local: true) do |f| %>
 <%= f.text_field :title, label: "Title:" %>
 <%= f.select :topic, ["Finance", "Housing", "Cars", "Travel", "Technology", "Lifestyle"], label: "Topic:" %>
