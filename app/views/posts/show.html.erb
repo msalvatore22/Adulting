@@ -84,7 +84,9 @@
 
           
 
-        
+          <% @post.comments.each do |comment| %>
+          <p class="card-text">Comment: <%= comment.content %></p>
+          <% end %>
           
           
    
