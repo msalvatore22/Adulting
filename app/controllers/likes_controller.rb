@@ -1,20 +1,5 @@
 class LikesController < ApplicationController
-  def index
-    @likes = like.all
-  end
-
-  def show
-    @like = Like.find(params[:id])
-  end
-
-  def new
-    @like = Like.new
-  end
-
-  def edit
-    @like = Like.find(params[:id])
-  end
-
+ 
   def create
     @like = Like.new(like_params)
 
@@ -22,16 +7,6 @@ class LikesController < ApplicationController
       redirect_to :action => 'index'
     else
       render :action => 'new'
-    end
-  end
-
-  def update
-    @like = Like.find(params[:id])
-	
-    if @like.update_attributes(like_params)
-       redirect_to :action => 'show', :id => @like
-    else
-       render :action => 'edit'
     end
   end
 
