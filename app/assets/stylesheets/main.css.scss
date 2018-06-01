@@ -47,22 +47,41 @@
 	text-align: center;
   }
 
-  .newpost {
-      padding-left: 50px;
-      padding-top: 50px;
-  }
+.new-post {
+    padding: 50px 120px 50px 120px;
+}
 .topic {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-.pic {
+.poster-child {
+   padding-top: 50px;
+}
+
+.next {
+    padding-left: 400px;
+}
+
+
+.card-img-top {
+    object-fit: cover;
+}
+
+.avatar img{
+    position: relative;
+    border: 5px solid rgba(255,255,255,0.5);
+	top: -50px;
+	margin-bottom: -50px;
+}
+.avatar {
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 }
 .topiko-caro {
     padding-top: 50px;
-    padding-left: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 .topiko-caro.ci-style-4 {
     min-height: 100px;
