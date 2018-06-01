@@ -13,31 +13,31 @@
 <body>
   <div id="flipkart-navbar" style="background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); box-shadow: 5px 5px 3px grey;">
     <div class="container">
-        <div class="row row1">
+        <nav class="row row1 stroke">
             <ul class="largenav pull-right">
-                <li class="upper-links"><%= link_to "Finances", posts_finance_path, class: "links" %></li>
-                <li class="upper-links"><%= link_to "Housing", posts_housing_path, class: "links" %></li>
-                <li class="upper-links"><%= link_to "Cars", posts_cars_path, class: "links" %></li>
-                <li class="upper-links"> <%= link_to "Travel", posts_travel_path, class: "links" %></li>
-                <li class="upper-links"> <%= link_to "Technology", posts_technology_path, class: "links" %></li>
-                <li class="upper-links">   <%= link_to "Lifestyle", posts_lifestyle_path, class: "links" %></li>
+                <li class="upper-links shake"><%= link_to "Finances", posts_finance_path, class: "links" %></li>
+                <li class="upper-links shake"><%= link_to "Housing", posts_housing_path, class: "links" %></li>
+                <li class="upper-links shake"><%= link_to "Cars", posts_cars_path, class: "links" %></li>
+                <li class="upper-links shake"> <%= link_to "Travel", posts_travel_path, class: "links" %></li>
+                <li class="upper-links shake"> <%= link_to "Technology", posts_technology_path, class: "links" %></li>
+                <li class="upper-links shake">   <%= link_to "Lifestyle", posts_lifestyle_path, class: "links" %></li>
                 <li class="upper-links">
                 </li>
-                <li class="upper-links dropdown"><a class="links" href="http://clashhacks.in/">Posts</a>
+                <li class="upper-links dropdown"><a class="links2" href="http://clashhacks.in/">Posts</a>
                     <ul class="dropdown-menu">
                         <li class="profile-li"><%= link_to "New", new_post_path, class: "links" %></li>
                          <li class="profile-li"><%= link_to "All Posts", posts_path, class: "links" %></li>
                     </ul>
                 </li>
-                   <li class="upper-links dropdown"><a class="links" href="http://clashhacks.in/">Account Settings</a>
+                   <li class="upper-links dropdown"><a class="links2" href="http://clashhacks.in/">Account</a>
                     <ul class="dropdown-menu">
-                        <li class="profile-li"><%= link_to "View Profile", user_path(current_user), class: "links" %></li>
+                        
                         <li class="profile-li"><%= link_to "Account Settings", edit_user_registration_path, class: "links" %></li>
                         <li class="profile-li"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "links" %></li>
                     </ul>
                 </li>
             </ul>
-        </div>
+        </nav>
         <div class="row row2">
             <div class="col-sm-2">
                 <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰ Adulting</span></h2>

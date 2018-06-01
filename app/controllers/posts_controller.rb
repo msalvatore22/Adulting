@@ -18,7 +18,6 @@ class PostsController < ApplicationController
       @like = Like.new()
     end
 
-
   def new
     @post = Post.new
 

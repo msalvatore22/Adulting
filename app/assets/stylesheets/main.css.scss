@@ -47,22 +47,41 @@
 	text-align: center;
   }
 
-  .newpost {
-      padding-left: 50px;
-      padding-top: 50px;
-  }
+.new-post {
+    padding: 50px 120px 50px 120px;
+}
 .topic {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-.pic {
+.poster-child {
+   padding-top: 50px;
+}
+
+.next {
+    padding-left: 400px;
+}
+
+
+.card-img-top {
+    object-fit: cover;
+}
+
+.avatar img{
+    position: relative;
+    border: 5px solid rgba(255,255,255,0.5);
+	top: -50px;
+	margin-bottom: -50px;
+}
+.avatar {
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
 }
 .topiko-caro {
     padding-top: 50px;
-    padding-left: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 .topiko-caro.ci-style-4 {
     min-height: 100px;
@@ -222,7 +241,9 @@
 .row2 {
     padding-bottom: 20px;
 }
-
+.row{
+    margin-right: -42px;
+}
 .flipkart-navbar-input {
     padding: 11px 16px;
     border-radius: 2px 0 0 2px;
@@ -295,7 +316,37 @@
     outline: none;
     font-size: 12px;
 }
+.shake{
+    
+}
+.shake:hover{
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
 
+@keyframes shake {
+
+    
+        20% {
+          transform: translateY(0px); }
+        40% {
+          transform: translateY(-15px); }
+        60% {
+          transform: translateY(0px); }
+        80% {
+          transform: translateY(-10px); }
+        100% {
+          transform: translateY(0px);
+          }
+         
+
+ 
+  }
+
+
+  
 .dropdown {
     position: relative;
     display: inline-block;
@@ -331,6 +382,14 @@
 .links {
     color: #fff;
     text-decoration: none;
+    font-size: 17.59px;
+}
+
+.links2 {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18.569px;
+    font-weight: 500;
 }
 
 .links:hover {
@@ -432,4 +491,79 @@
    }
 
 
-
+/* NAVIGATION */
+nav {
+    width: 90%;
+    margin: 0 auto;;
+    padding: 5px 0;
+    box-shadow: 0px 5px 0px #dedede;
+  }
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline-block;
+  }
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+  }
+  nav ul li a:hover {
+    color: #555;
+  }
+  
+  
+  /* stroke */
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #fff;
+    height: 1px;
+  }
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+  }
+  
+  nav.fill ul li a {
+    transition: all 2s;
+  }
+  
+  nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+  }
+  nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+  }
+  nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+  }
