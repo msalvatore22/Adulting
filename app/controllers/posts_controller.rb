@@ -7,27 +7,21 @@ class PostsController < ApplicationController
 
     @comments = Comment.all
     @comment = Comment.new
-  
-    
   end
 
   def show
     @post = Post.find(params[:id])
-
-
+    @like_count = Like.where(post_id: params[:id]).count
+    @like = Like.new()
   end
 
   def new
     @post = Post.new
-
     @user = User.find_by(params[:id])
-
   end
 
   def edit
     @post = Post.find(params[:id])
-
-
   end
 
   def create
@@ -43,11 +37,11 @@ class PostsController < ApplicationController
       render :action => 'new'
     end
 
-    if @comment.save
-      redirect_to :action => 'index'
-    else
-      render :action => 'new'
-    end
+    # if @comment.save
+    #   redirect_to :action => 'index'
+    # else
+    #   render :action => 'new'
+    # end
   end
 
   def update
@@ -100,6 +94,6 @@ class PostsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:content, :user_id, :post_id)
+    params.permit(:content, :user_id, :post_id)
   end
 end
