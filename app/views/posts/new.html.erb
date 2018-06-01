@@ -2,6 +2,6 @@
 <%= f.text_field :title, label: "Title:" %>
 <%= f.select :topic, ["Finance", "Housing", "Cars", "Travel", "Technology", "Lifestyle"], label: "Topic:" %>
 <%= f.text_area :content, label: "Content:" %>
-<%= f.hidden_field(:user_id, value: "#{@user.id}") %>
+<%= f.hidden_field(:user_id, value: @user.id) %>
 <%= f.submit "Create Post" %>
 <% end %>

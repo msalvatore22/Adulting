@@ -1,7 +1,8 @@
 class CommentsController < ApplicationController
   def index
     @comments = Comment.all
-    @user = User.find_by(params[:id])
+    @user = current_user
+    @post = Post.find(params[:id])
   end
 
   def show
@@ -10,7 +11,8 @@ class CommentsController < ApplicationController
 
   def new
     @comment = Comment.new
-    @user = User.find_by(params[:id])
+    @post = Post.find(params[:id])
+    @user = current_user
   end
 
   def edit
@@ -18,7 +20,8 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.new(comment_params)
+    @post = Post.find_by(params[:id])
+    @comment = @post.comments.create(comment_params)
     @user = User.find_by(params[:id])
 
     if @comment.save
