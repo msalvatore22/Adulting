@@ -56,6 +56,18 @@
  <%= @post.content %>
           <hr>
 
+          <!-- Likes Form -->
+          <div class="card my-4">
+            <h5 class="card-header">Like post: <%= @like_count %></h5>
+            <div class="card-body">
+              <%= bootstrap_form_for(@like) do |f| %>
+                <%= f.hidden_field(:post_id, value: "#{@post.id}") %>
+                <%= f.hidden_field(:user_id, value: "#{current_user.id}") %>
+                <%= f.submit "Like" %>
+              <% end %>
+            </div>
+          </div>
+
           <!-- Comments Form -->
           <div class="card my-4">
             <h5 class="card-header">Leave a Comment:</h5>
