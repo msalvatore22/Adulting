@@ -1,7 +1,82 @@
-<%= bootstrap_form_with(model: @post, local: true) do |f| %>
-<%= f.text_field :title, label: "Title:" %>
-<%= f.select :topic, ["Finance", "Housing", "Cars", "Travel", "Technology", "Lifestyle"], label: "Topic:" %>
-<%= f.text_area :content, label: "Content:" %>
-<%= f.hidden_field(:user_id, value: "#{@user.id}") %>
-<%= f.submit "Create Post" %>
-<% end %>
+
+                <!-- PAGE CONTENT WRAPPER -->
+                <%= bootstrap_form_with(model: @post, local: true) do |f| %>
+                <div class="page-content-wrap">
+                
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+                            <form class="form-horizontal">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><strong>Create New</strong> Post</h3>
+                                   
+                                </div>
+                                <div class="panel-body">
+                                    <p>This is where you will be able to create a new post.  Be sure to iclude all the require criteria to proceed to the next page.  Also we have implemented a feature to allow media uploads via a gem called Carrier Wave!</p>
+                                </div>
+                                <div class="panel-body">                                                                        
+                                    
+                                    <div class="form-group">
+                                        
+                                        <div class=" col-xs-12">                                            
+                                            <div class="input-group">
+                                     
+                                            
+                                                <span class="input-group-addon"><span class="fa fa-pencil"></span></span>
+                                                
+
+                        
+                                            </div>                                            
+                                            <span class="help-block">This is where you will enter the title of the post you wish to create.</span>
+                                        </div>
+                                    </div>
+                                    
+                                 
+                                    
+                                    <div class="form-group">
+                                        
+                                        <div class=" col-xs-12">                                            
+                                            <%= f.text_area :content, label: "Content:", class: "form-control", row:"5" %>
+                                            <span class="help-block">This is where all the content of your post will go.</span>
+                                        </div>
+                                    </div>
+                                    
+                                  
+                                    
+                                    <div class="form-group">
+                                        
+                                        <div class="col-xs-12">                                                                                            
+                                            <%= f.select :topic, ["Finance", "Housing", "Cars", "Travel", "Technology", "Lifestyle"], label: "Topic:" %>
+                                            <span class="help-block">Select a topic for your post.</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="col-md-3 col-xs-12 control-label">File</label>
+                                        <div class=" col-xs-12">                                                                                                                                        
+                                            <input type="file" class="fileinput btn-white" name="filename" id="filename" title="Browse file"/>
+                                            <span class="help-block">Input type file</span>
+                                        </div>
+                                    </div>
+                                    
+        
+                                </div>
+                                <div class="panel-footer">
+                                    <button class="btn btn-default">Clear Form</button>  
+                                    <%= f.hidden_field(:user_id, value: "#{@user.id}") %>                                  
+                                    <%= f.submit "Create Post" %>
+                                </div>
+                            </div>
+                            </form>
+                            
+                        </div>
+                    </div>                    
+                    
+                </div>
+                <!-- END PAGE CONTENT WRAPPER -->                                                
+            </div>            
+            <!-- END PAGE CONTENT -->
+        </div>
+        <% end %>
+        <!-- END PAGE CONTAINER -->
