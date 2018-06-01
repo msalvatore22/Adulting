@@ -63,7 +63,7 @@
               <%= bootstrap_form_for(@like) do |f| %>
                 <%= f.hidden_field(:post_id, value: "#{@post.id}") %>
                 <%= f.hidden_field(:user_id, value: "#{current_user.id}") %>
-                <%= f.submit "Like" %>
+                <%= f.submit "Like", disabled: @is_user_liked %>
               <% end %>
             </div>
           </div>
@@ -80,6 +80,7 @@
               <% end %>
             </div>
           </div>
+
 
           <!-- Single Comment -->
           <% @post.comments.each do |comment| %>
