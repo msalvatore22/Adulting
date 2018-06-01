@@ -5,6 +5,7 @@
     <div class="d-flex flex-wrap">
       <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 35rem;">
         <div class="card-body">
+        <h4 class="card-title"><%= "#{@post.user.username}"%>
         <h5 class="card-title">Title: <%= post.title %></h5>
         <h6 class="card-subtitle mb-2 text-muted">Topic: <%= post.topic %></h6>
         <p class="card-text">Content: <%= post.content %></p>
