@@ -1,14 +1,14 @@
 <div class="container">
 <h1 class="header">Adulting about Finances <%= params[:finance] %></h1>
 <div class="row col-12-sm text-center justify-content-center" style="margin-bottom: 5rem;">
-<% @posts.each do |post| %>
+<% @posts.reverse.each do |post| %>
 
 <div class="topiko-caro row">
 <div class="d-flex flex-wrap">
 <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 35rem;">
-<span class="card-body" style="width: 2rem">
-<img class="card-img-top card-body" src="/assets/car.jpg" alt="Card image cap">
-<img class="pic" src="/assets/pic.png" alt="..." class="rounded-circle">
+<%# <span class="card-body" style="width: 2rem"> %>
+<%# <img class="card-img-top card-body" src="/assets/car.jpg" alt="Card image cap"> %>
+<img class="pic" src="/assets/donald.jpg" alt="..." class="rounded-circle">
   <div class="card-body">
     <h5 class="card-title"> <%= post.title %></h5>
     <%# <h6 class="card-subtitle mb-2 text-muted">Topic: <%= post.topic %></h6> 
@@ -19,4 +19,24 @@
 </div>
 </div>
 <% end %>
-
+<div class="next">
+  <nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <span class="page-link">Previous</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active">
+      <span class="page-link">
+        2
+        <span class="sr-only">(current)</span>
+      </span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+</div>
+ 

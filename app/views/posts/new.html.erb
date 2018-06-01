@@ -1,8 +1,14 @@
-
+<div class="new-post card">
 <%= bootstrap_form_with(model: @post, local: true) do |f| %>
+
 <%= f.text_field :title, label: "Title:" %>
+
+
 <%= f.select :topic, ["Finance", "Housing", "Cars", "Travel", "Technology", "Lifestyle"], label: "Topic:" %>
+
 <%= f.text_area :content, label: "Content:" %>
+
 <%= f.hidden_field(:user_id, value: "#{@user.id}") %>
-<%= f.submit "Create Post" %>
+<%= f.submit({:class=> 'btn btn-outline-primary'}) %>
 <% end %>
+</div>
