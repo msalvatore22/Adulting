@@ -6,6 +6,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by(params[:id])
+
+    @user_score = @user.score
   end
 end

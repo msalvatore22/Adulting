@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+ 
   devise_for :users
   resources :users
   get "home/index"
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   get 'posts/housing', :to => 'posts#housing_posts'
   get 'posts/travel', :to => 'posts#travel_posts'
 
+  resources :scores
   resources :comments
   resources :likes
   resources :posts

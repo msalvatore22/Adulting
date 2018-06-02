@@ -4,9 +4,7 @@
     <title>Adulting</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -31,7 +29,7 @@
                 </li>
                    <li class="upper-links dropdown"><a class="links2" href="http://clashhacks.in/">Account</a>
                     <ul class="dropdown-menu">
-                        
+                        <li class="profile-li"><%= link_to "View Profile", @user, class: "links" %></li>
                         <li class="profile-li"><%= link_to "Account Settings", edit_user_registration_path, class: "links" %></li>
                         <li class="profile-li"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "links" %></li>
                     </ul>

@@ -9,14 +9,14 @@ class PostsController < ApplicationController
     @comment = Comment.new
   end
     
-    def show
-      @user = current_user
-      @comment = Comment.new
-      @post = Post.find(params[:id])
-      @like_count = Like.where(post_id: params[:id]).count
-      @is_user_liked = Like.where(user_id: @user.id, post_id: params[:id]).count != 0
-      @like = Like.new()
-    end
+  def show
+    @user = current_user
+    @comment = Comment.new
+    @post = Post.find(params[:id])
+    @like_count = Like.where(post_id: params[:id]).count
+    @is_user_liked = Like.where(user_id: @user.id, post_id: params[:id]).count != 0
+    @like = Like.new()
+  end
 
   def new
     @post = Post.new
@@ -55,8 +55,6 @@ class PostsController < ApplicationController
   def destroy
     Post.find(params[:id]).destroy
     redirect_to :action => 'index'
-
-    
   end
 
   def car_posts
