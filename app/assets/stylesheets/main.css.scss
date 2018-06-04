@@ -62,9 +62,11 @@
 .next {
     padding-left: 400px;
 }
-
+.user-name {
+    font-family: 'League Gothic', sans-serif;
+}
 .card {
-	width: 30%;
+	
 	margin: 10px 15px 10px 15px;
 } 
 
@@ -83,8 +85,10 @@
     width: 100px;
     height: 100px;
 }
+
 .stroke {
     position: relative;
+    animation-direction: normal;
 }
 .stroke:after {
     position: absolute;
@@ -95,7 +99,7 @@
     width: 0%;
     content: '.';
     color: transparent;
-    background: #3ddad7;
+    background: #2a93d5;
     height: 3px;
     transition-delay: .3s
 }
@@ -132,8 +136,124 @@
     visibility: visible;
     height: 100%;
   }
-  
+//   .post-avatar {
+//     border: 3px solid #999;
+//     -webkit-border-radius: 30px;
+//     height: 18px;
+//     width: 18px;
+//     position: absolute;
+//     left:20px;
+//     top:214px;
+//     -webkit-animation: pulsate 1s ease-out;
+//     -webkit-animation-iteration-count: infinite; 
+//     opacity: 0.0
+// }
+// @-webkit-keyframes pulsate {
+//     0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+//     50% {opacity: 1.0;}
+//     100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+// }
+ 
+// .post-avatar {
+//     border: 2px solid #fff;
+//     -webkit-border-radius: 50%;
+//     height: 18px;
+//     width: 18px;
+//     position: absolute;
+//     left:20px;
+//    top:214px;
+//    -webkit-animation: pulsate 2s ease-out;
+//    -webkit-animation-iteration-count: infinite; 
+//    opacity: 0.0;
+// }
+// .post-avatar:before {
+//    content:"";
+//    display:block;
+//    border: 2px solid #fff;
+//    -webkit-border-radius: 50%;
+//    height: 30px;
+//    width: 30px;
+//    position: absolute;
+//    left:-8px;
+//    top:-8px;
+//    -webkit-animation: pulsate 1s ease-out;
+//    -webkit-animation-iteration-count: infinite; 
+//    -webkit-animation-delay: 0.1s;
+//    opacity: 0.0;
+// }
+// .post-avatar:after {
+//    content:"";
+//    display:block;
+//    border:2px solid #fff;
+//    -webkit-border-radius: 50%;
+//    height: 50px;
+//    width: 50px;
+//    position: absolute;
+//    left:-18px;
+//    top:-18px;
+//    -webkit-animation: pulsate 1s ease-out;
+//    -webkit-animation-iteration-count: infinite; 
+//    -webkit-animation-delay: 0.2s;
+//    opacity: 0.0;
+// }
+// @-webkit-keyframes pulsate {
+//    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+//    50% {opacity: 1.0;}
+//    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+// }
 
+.post-avatar img {
+    border-radius: 9999px;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  @keyframes cycle-colors {
+    0% { border-color: hsl(0, 100%, 50%); }
+    25% { border-color: hsl(90, 100%, 50%); }
+    50% { border-color: hsl(180, 100%, 50%); }
+    75% { border-color: hsl(270, 100%, 50%); }
+    100% { border-color: hsl(360, 100%, 50%); }
+  }
+  
+  @keyframes pulse {
+    to {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+  
+//   .post-avatar::before,
+//   .post-avatar::after {
+//     animation: pulse 2s linear infinite;
+//     border: #fff solid 8px;
+//     border-radius: 9999px;
+//     box-sizing: border-box;
+//     content: ' ';
+//     height: 140%;
+//     left: -20%;
+//     opacity: .6;
+//     position: absolute;
+//     top: -20%;
+//     transform: scale(0.714);
+//     width:100%;
+//     z-index: 1;
+//   }
+  
+//   .post-avatar::after {
+//     animation-delay: 1s;
+//   }
+  
+  .post-avatar:hover::before,
+  .post-avatar:hover::after {
+    animation: pulse 1s infinite;
+  }
+  
+  .post-avatar:hover::after {
+    animation-delay: .5s;
+  }
 .topiko-caro {
     padding-top: 50px;
     padding-left: 30px;
@@ -552,7 +672,7 @@ nav {
     width: 90%;
     margin: 0 auto;;
     padding: 5px 0;
-    box-shadow: 0px 5px 0px #dedede;
+
   }
   nav ul {
     list-style: none;
@@ -623,3 +743,37 @@ nav {
     -moz-animation: fill 1s forwards;
     opacity: 1;
   }
+
+  .jumbotron {
+    background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    color: #FFF;
+    font-weight: 300;
+    border-radius: 0px;
+    }
+
+    .jumbotron-sm {
+    padding-top: 24px;
+    padding-bottom: 24px; 
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+   
+   
+    .jumbotron small {
+    color: #FFF;
+    }
+    .h1 small {
+    font-size: 24px;
+    }
+
+    .h1{
+        font-weight: 300;
+    }
+    
+    .form-control{
+        border: 1px solid #b84492;
+    }
+
+    .flipkart-navbar-input {
+        width: 90%;
+    }

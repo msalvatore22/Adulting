@@ -1,9 +1,8 @@
 <h3>User</h3>
 <p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
+<p>Username: <%= @user.username %> </p>
 <p>Picture: <img src="<%= @user.picture %>"/></p>
 
-
-<%= link_to "Create Your Adulting Score!", new_score_path %>
 
 <% if @user_score %>
 <div class="container">
@@ -12,15 +11,16 @@
       <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 35rem;">
         <div class="card-body">
         <h5 class="card-title">My Adulting Score</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Finance: <%= @user_score.finance if @user_score.finance  %></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Housing: <%= @user_score.housing if @user_score.housing%></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Cars: <%= @user_score.cars if @user_score.cars%></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Travel: <%= @user_score.travel if @user_score.travel %></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Technology: <%= @user_score.technology if @user_score.technology%></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Lifestyle: <%= @user_score.lifestyle if @user_score.lifestyle %></h6>
+        <h6 class="card-subtitle mb-2 text-muted">Finance: <%= @user_score.finance %></h6>
+        <h6 class="card-subtitle mb-2 text-muted">Housing: <%= @user_score.housing %></h6>
+        <h6 class="card-subtitle mb-2 text-muted">Cars: <%= @user_score.cars %></h6>
+        <h6 class="card-subtitle mb-2 text-muted">Travel: <%= @user_score.travel %></h6>
+        <h6 class="card-subtitle mb-2 text-muted">Technology: <%= @user_score.technology %></h6>
+        <h6 class="card-subtitle mb-2 text-muted">Lifestyle: <%= @user_score.lifestyle %></h6>
         <%= link_to "Update Your Adulting Score!", edit_score_path %>
         </div>
     </div>
-
+<% else %>
+<%= link_to "Create Your Adulting Score!", new_score_path %>
 <% end %>
 

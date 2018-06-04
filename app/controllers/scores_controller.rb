@@ -5,18 +5,18 @@ class ScoresController < ApplicationController
 
   def show
     @score =  Score.find_by(params[:id])
-    @user = User.find_by(params[:id])
+    @user = current_user
     @user_score = @user.score
   end
 
   def new
     @score =  Score.new
-    @user = User.find_by(params[:id])
+
     @user = current_user
   end
 
   def edit
-    @user = User.find_by(params[:id])
+    @user = current_user
     @score =  Score.find_by(params[:id])
   end
 
