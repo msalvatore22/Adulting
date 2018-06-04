@@ -73,17 +73,20 @@
 .card-img-top {
     object-fit: cover;
 }
-
+.post-img {
+    width:285px;
+    height:190px;
+}
 .avatar img{
     position: relative;
     border: 5px solid rgba(255,255,255,0.5);
 	top: -50px;
 	margin-bottom: -50px;
 }
-.avatar {
+.avatar img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 
 .stroke {

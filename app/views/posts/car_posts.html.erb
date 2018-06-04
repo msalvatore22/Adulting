@@ -12,12 +12,12 @@
 <%= image_tag "#{@user.picture}", class: "rounded-circle" %>
 </div>
 </div>
-  <div class="card-body">
-    <h4 class="card-title"><%= post.user.username %>
-    <h5 class="card-title card-dark"> <%= post.title %></h5> 
-    <p class="card-text"><%= post.content %></p>
-    <btn class="btn btn-outline-primary"> <%= link_to "View Post", post %></btn>
-  </div>
+ <div class="card-body">
+   <h4 class="card-title"><%= post.user.username %>
+   <h5 class="card-title card-dark"> <%= post.title %></h5>
+   <p class="card-text"><%= post.content %></p>
+   <btn class="btn btn-outline-primary"> <%= link_to "Read More", post %></btn>
+ </div>
 </div>
 </div>
 </div>

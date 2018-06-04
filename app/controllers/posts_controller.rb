@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     if params[:search]
       @posts = Post.where('topic LIKE ?', "%#{params[:search]}%")
     else
+      @user = current_user
       @posts = Post.all
     end
   end
@@ -90,7 +91,8 @@ class PostsController < ApplicationController
 
   def technology_posts
     @posts = Post.where(topic: 'Technology').all
-    @user = current_user   
+    @user = current_user
+
   end
 
   def travel_posts
