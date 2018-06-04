@@ -7,12 +7,12 @@ class ScoresController < ApplicationController
     @score =  Score.find_by(params[:id])
     @user = User.find_by(params[:id])
     @user_score = @user.score
-    puts @user.score
   end
 
   def new
     @score =  Score.new
     @user = User.find_by(params[:id])
+    @user = current_user
   end
 
   def edit
