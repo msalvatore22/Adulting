@@ -21,13 +21,13 @@
                 <li class="upper-links shake">   <%= link_to "Lifestyle", posts_lifestyle_path, class: "links" %></li>
                 <li class="upper-links">
                 </li>
-                <li class="upper-links dropdown"><a class="links2" href="http://clashhacks.in/">Posts</a>
+                <li class="upper-links dropdown"><a class="links2" href="#">Posts</a>
                     <ul class="dropdown-menu">
                         <li class="profile-li"><%= link_to "New", new_post_path, class: "links" %></li>
                          <li class="profile-li"><%= link_to "All Posts", posts_path, class: "links" %></li>
                     </ul>
                 </li>
-                   <li class="upper-links dropdown"><a class="links2" href="http://clashhacks.in/">Account</a>
+                   <li class="upper-links dropdown"><a class="links2" href="#">Account</a>
                     <ul class="dropdown-menu">
                         <li class="profile-li"><%= link_to "View Profile", current_user, class: "links" %></li>
                         <li class="profile-li"><%= link_to "Account Settings", edit_user_registration_path, class: "links" %></li>
@@ -39,7 +39,7 @@
         <div class="row row2">
             <div class="col-sm-2">
                 <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰ Adulting</span></h2>
-                <h1 style="margin:0px;"><span class="largenav">Adulting</span></h1>
+                <h1 style="margin:0px;"><span class="largenav"><%= link_to image_tag("Adulting2.jpg"), home_index_path %></span></h1>
             </div>
             <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
                 <div class="row">
@@ -63,10 +63,12 @@
         <span class="sidenav-heading">Home</span>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     </div>
-    <a href="http://clashhacks.in/">Link</a>
-    <a href="http://clashhacks.in/">Link</a>
-    <a href="http://clashhacks.in/">Link</a>
-    <a href="http://clashhacks.in/">Link</a>
+    <li class="upper-links"><%= link_to "Finances", posts_finance_path, class: "links" %></li>
+  <li class="upper-links"><%= link_to "Housing", posts_housing_path, class: "links" %></li>
+  <li class="upper-links"><%= link_to "Cars", posts_cars_path, class: "links" %></li>
+  <li class="upper-links"> <%= link_to "Travel", posts_travel_path, class: "links" %></li>
+  <li class="upper-links"> <%= link_to "Technology", posts_technology_path, class: "links" %></li>
+  <li class="upper-links">   <%= link_to "Lifestyle", posts_lifestyle_path, class: "links" %></li>
 </div>
 <%= yield %>
 <ul>

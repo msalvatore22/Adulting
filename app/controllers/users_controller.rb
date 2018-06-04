@@ -12,7 +12,6 @@ class UsersController < ApplicationController
 
     @user_score = @user.score
 
-    @user = current_user
   end
 
   private
