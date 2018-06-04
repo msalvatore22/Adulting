@@ -10,4 +10,10 @@ class UsersController < ApplicationController
 
     @user_score = @user.score
   end
+
+  private
+
+  def score_params
+    params.require(:score).permit(:finance, :housing, :cars, :travel, :technology, :lifestyle, :user_id)
+  end
 end
