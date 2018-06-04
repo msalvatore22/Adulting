@@ -1,9 +1,19 @@
 <h3>User</h3>
-<p>Name: <%= @user.last_name if @user.last_name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+<p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
+<% if @user.picture %>
+<p>Picture: <img src="<%= @user.picture %>"/></p>
+<% else %>
+<p>Picture: <img src="http://www.upplanet.com/bighero/outlay-demo/img/customer_avatar.png"/></p>
+<% end %>
+<% provide(:title, @user.username) %>
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.username %>
+</h1>
 
 <%= link_to "Create Your Adulting Score!", new_score_path %>
 
+<% if @user_score %>
 <div class="container">
  <div class="row col-12-sm text-center justify-content-center" style="margin-bottom: 5rem;">
     <div class="d-flex flex-wrap">
@@ -20,6 +30,5 @@
         </div>
     </div>
 
-
-
+<% end %>
 

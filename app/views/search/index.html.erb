@@ -1,0 +1,59 @@
+<div class="container">
+<% if @posts.blank? %>
+  <h4>There are no posts containing the term <%= params[:search] %>.</h4>
+<% else %>
+ <div class="row col-12-sm text-center justify-content-center" style="margin-bottom: 5rem;">
+ <% @posts.reverse.each do |post| %>
+    <div class="d-flex flex-wrap">
+      <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 35rem;">
+        <div class="card-body">
+        <h4 class="card-title"><%= "#{post.user.username}"%>
+        <h5 class="card-title">Title: <%= post.title %></h5>
+        <h6 class="card-subtitle mb-2 text-muted">Topic: <%= post.topic %></h6>
+        <p class="card-text">Content: <%= post.content %></p>
+        <li><%= link_to "View Post", post %></li>
+        </div>
+    </div>
+<% end %>
+    <div class="next">
+      <nav aria-label="...">
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <span class="page-link">Previous</span>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active">
+          <span class="page-link">
+            2
+            <span class="sr-only">(current)</span>
+          </span>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+<% end %>
+
+<% if @users.blank? %>
+  <h4>There are no users containing the term <%= params[:search] %>.</h4>
+<% else %>
+ 
+    <div class="row">
+      <h3>Users</h3>
+      <div class="column">
+        <table class="table">
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <%= render user %>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<% end %>
+</div>
+

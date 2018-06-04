@@ -8,6 +8,15 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(params[:id])
 
+    @user = current_user
+
     @user_score = @user.score
+
+  end
+
+  private
+
+  def score_params
+    params.require(:score).permit(:finance, :housing, :cars, :travel, :technology, :lifestyle, :user_id)
   end
 end

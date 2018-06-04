@@ -1,12 +1,18 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    # @posts = Post.all
     
-    @post = Post.find_by(params[:id])
-    @user = current_user
+    # @post = Post.find_by(params[:id])
+    # @user = current_user
 
-    @comments = Comment.all
-    @comment = Comment.new
+    # @comments = Comment.all
+    # @comment = Comment.new
+
+    if params[:search]
+      @posts = Post.where('topic LIKE ?', "%#{params[:search]}%")
+    else
+      @posts = Post.all
+    end
   end
     
   def show
@@ -22,10 +28,15 @@ class PostsController < ApplicationController
     @post = Post.new
 
     @user = User.find_by(params[:id])
+
+    @user = current_user
   end
 
   def edit
     @post = Post.find(params[:id])
+    @user = User.find_by(params[:id])
+
+    @user = current_user
   end
 
   def create
@@ -85,8 +96,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :topic, :content, :user_id)
+    params.require(:post).permit(:search, :title, :topic, :content, :user_id)
   end
-
 
 end

@@ -4,7 +4,7 @@
     <title>Adulting</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -21,15 +21,15 @@
                 <li class="upper-links shake">   <%= link_to "Lifestyle", posts_lifestyle_path, class: "links" %></li>
                 <li class="upper-links">
                 </li>
-                <li class="upper-links dropdown"><a class="links2" href="http://clashhacks.in/">Posts</a>
+                <li class="upper-links dropdown"><a class="links2" href="#">Posts</a>
                     <ul class="dropdown-menu">
                         <li class="profile-li"><%= link_to "New", new_post_path, class: "links" %></li>
                          <li class="profile-li"><%= link_to "All Posts", posts_path, class: "links" %></li>
                     </ul>
                 </li>
-                   <li class="upper-links dropdown"><a class="links2" href="http://clashhacks.in/">Account</a>
+                   <li class="upper-links dropdown"><a class="links2" href="#">Account</a>
                     <ul class="dropdown-menu">
-                        <li class="profile-li"><%= link_to "View Profile", @user, class: "links" %></li>
+                        <li class="profile-li"><%= link_to "View Profile", current_user, class: "links" %></li>
                         <li class="profile-li"><%= link_to "Account Settings", edit_user_registration_path, class: "links" %></li>
                         <li class="profile-li"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "links" %></li>
                     </ul>
@@ -39,16 +39,14 @@
         <div class="row row2">
             <div class="col-sm-2">
                 <h2 style="margin:0px;"><span class="smallnav menu" onclick="openNav()">☰ Adulting</span></h2>
-                <h1 style="margin:0px;"><span class="largenav">Adulting</span></h1>
+                <h1 style="margin:0px;"><span class="largenav"><%= link_to image_tag("Adulting2.jpg"), home_index_path %></span></h1>
             </div>
             <div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-11">
                 <div class="row">
-                    <input class="flipkart-navbar-input col-xs-11" type="" placeholder="Search for Topics, Users and more" name="">
-                    <button class="flipkart-navbar-button col-xs-1">
-                        <svg width="15px" height="15px">
-                            <path d="M11.618 9.897l4.224 4.212c.092.09.1.23.02.312l-1.464 1.46c-.08.08-.222.072-.314-.02L9.868 11.66M6.486 10.9c-2.42 0-4.38-1.955-4.38-4.367 0-2.413 1.96-4.37 4.38-4.37s4.38 1.957 4.38 4.37c0 2.412-1.96 4.368-4.38 4.368m0-10.834C2.904.066 0 2.96 0 6.533 0 10.105 2.904 13 6.486 13s6.487-2.895 6.487-6.467c0-3.572-2.905-6.467-6.487-6.467 "></path>
-                        </svg>
-                    </button>
+                  <%= form_tag(search_index_path, :method => "get", id: "search-form") do %>
+                    <%= text_field_tag :search, params[:search], placeholder: "Search for Topics, Users and more" %>
+                    <%= submit_tag "Search", :name => nil %>
+                  <% end %>
                 </div>
             </div>
        <!--<div class="container">
@@ -65,10 +63,12 @@
         <span class="sidenav-heading">Home</span>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
     </div>
-    <a href="http://clashhacks.in/">Link</a>
-    <a href="http://clashhacks.in/">Link</a>
-    <a href="http://clashhacks.in/">Link</a>
-    <a href="http://clashhacks.in/">Link</a>
+    <li class="upper-links"><%= link_to "Finances", posts_finance_path, class: "links" %></li>
+  <li class="upper-links"><%= link_to "Housing", posts_housing_path, class: "links" %></li>
+  <li class="upper-links"><%= link_to "Cars", posts_cars_path, class: "links" %></li>
+  <li class="upper-links"> <%= link_to "Travel", posts_travel_path, class: "links" %></li>
+  <li class="upper-links"> <%= link_to "Technology", posts_technology_path, class: "links" %></li>
+  <li class="upper-links">   <%= link_to "Lifestyle", posts_lifestyle_path, class: "links" %></li>
 </div>
 <%= yield %>
 <ul>
