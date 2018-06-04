@@ -8,6 +8,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by(params[:id])
 
+    @user = current_user
+
     @user_score = @user.score
 
     @user = current_user
