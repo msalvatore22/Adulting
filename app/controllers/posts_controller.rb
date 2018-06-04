@@ -92,6 +92,7 @@ class PostsController < ApplicationController
   def technology_posts
     @posts = Post.where(topic: 'Technology').all
     @user = current_user
+
   end
 
   def travel_posts
