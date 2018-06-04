@@ -1,22 +1,28 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    # @posts = Post.all
     
-    @post = Post.find_by(params[:id])
-    @user = current_user
+    # @post = Post.find_by(params[:id])
+    # @user = current_user
 
-    @comments = Comment.all
-    @comment = Comment.new
+    # @comments = Comment.all
+    # @comment = Comment.new
+
+    if params[:search]
+      @posts = Post.where('topic LIKE ?', "%#{params[:search]}%")
+    else
+      @posts = Post.all
+    end
   end
     
-    def show
-      @user = current_user
-      @comment = Comment.new
-      @post = Post.find(params[:id])
-      @like_count = Like.where(post_id: params[:id]).count
-      @is_user_liked = Like.where(user_id: @user.id, post_id: params[:id]).count != 0
-      @like = Like.new()
-    end
+  def show
+    @user = current_user
+    @comment = Comment.new
+    @post = Post.find(params[:id])
+    @like_count = Like.where(post_id: params[:id]).count
+    @is_user_liked = Like.where(user_id: @user.id, post_id: params[:id]).count != 0
+    @like = Like.new()
+  end
 
   def new
     @post = Post.new
@@ -55,8 +61,6 @@ class PostsController < ApplicationController
   def destroy
     Post.find(params[:id]).destroy
     redirect_to :action => 'index'
-
-    
   end
 
   def car_posts
@@ -87,8 +91,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :topic, :content, :user_id)
+    params.require(:post).permit(:search, :title, :topic, :content, :user_id)
   end
-
 
 end

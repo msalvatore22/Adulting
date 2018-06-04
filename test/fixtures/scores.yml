@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  finance: 1
+  housing: 1
+  cars: 1
+  travel: 1
+  technology: 1
+  lifestyle: 1
+  user_id: 1
+
+two:
+  finance: 1
+  housing: 1
+  cars: 1
+  travel: 1
+  technology: 1
+  lifestyle: 1
+  user_id: 1

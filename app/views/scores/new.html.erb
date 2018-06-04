@@ -1,0 +1,14 @@
+<div class="new-post card">
+<%= bootstrap_form_with(model: @score, local: true) do |f| %>
+
+<%= f.select :finance, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], label: "Finance Adulting Score" %>
+<%= f.select :housing, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], label: "Housing Adulting Score" %>
+<%= f.select :cars, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], label: "Cars Adulting Score" %>
+<%= f.select :travel, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], label: "Travel Adulting Score" %>
+<%= f.select :technology, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], label: "Technology Adulting Score" %>
+<%= f.select :lifestyle, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], label: "Lifestyle Adulting Score" %>
+
+<%= f.hidden_field(:user_id, value: "#{@user.id}") %>
+<%= f.submit({:class=> 'btn btn-outline-primary'}) %>
+<% end %>
+</div>
