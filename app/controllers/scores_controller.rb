@@ -11,6 +11,7 @@ class ScoresController < ApplicationController
 
   def new
     @score =  Score.new
+
     @user = current_user
   end
 
