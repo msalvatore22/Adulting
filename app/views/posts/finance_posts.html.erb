@@ -6,17 +6,17 @@
 <div class="topkio-caro row">
 <div class="d-flex flex-wrap">
 <div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 35rem;">
+<div class="stroke">
  <img class="post-img card-img-top" src="/assets/car.jpg" alt="Card image cap"> 
-<div class="avatar">
+<div class="avatar text-center">
 <img src="/assets/trump.jpg" alt="..." class="rounded-circle">
 </div>
+</div>
   <div class="card-body">
-  <%# <h3 class=""card-text"><%= link_to user.first_name %>" > 
-  
-    <h5 class="card-title card-dark"> <%= post.title %></h5>
-     
-    <p class="card-text"><%= post.content %></p>
-    <a href="#" class="btn btn-primary">Read More</a>
+ <h5 class="card-title"><%= link_to post.user.username, current_user %> 
+      <h5 class="card-title card-dark"> <%= post.title %></h5>
+         <p class="card-text"><%= post.content %></p>
+    <btn class="btn btn-outline-primary"> <%= link_to "View Post", post %></btn>
   </div>
 </div>
 </div>
