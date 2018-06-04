@@ -1,15 +1,50 @@
-<div class="new-post card">
-<%= bootstrap_form_with(model: @post, local: true) do |f| %>
-
-<%= f.text_field :title, label: "Title:" %>
 
 
-<%= f.select :topic, ["Finance", "Housing", "Cars", "Travel", "Technology", "Lifestyle"], label: "Topic:" %>
-
-<%= f.text_area :content, label: "Content:" %>
-
-<%= f.hidden_field(:user_id, value: "#{@user.id}") %>
-<%= f.submit({:class=> 'btn btn-outline-primary'}) %>
-<% end %>
+<div class="jumbotron jumbotron-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="h1">
+                    Create Post <small>Thanks for contributing to our community <3</small></h1>
+            </div>
+        </div>
+    </div>
 </div>
+<div class="container">
+<%= bootstrap_form_with(model: @post, local: true) do |f| %>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="well well-sm">
+                <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <%= f.text_field :title, label: "Title:" %>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">
+                                Subject</label>
+                          <%= f.select :topic, ["Finance", "Housing", "Cars", "Travel", "Technology", "Lifestyle"], label: "Topic:" %>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
 
+
+                                <%= f.text_area :content, label: "Content:", rows: "9", cols:"25"%>
+                                <%= f.hidden_field(:user_id, value: "#{@user.id}") %>
+        
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                    <%= f.submit({:class=> 'btn btn-outline-primary'}) %>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+       
+    </div>
+    <% end %>
+</div>
