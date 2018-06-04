@@ -29,7 +29,7 @@
                 </li>
                    <li class="upper-links dropdown"><a class="links2" href="http://clashhacks.in/">Account</a>
                     <ul class="dropdown-menu">
-                        <li class="profile-li"><%= link_to "View Profile", @user, class: "links" %></li>
+                        <li class="profile-li"><%= link_to "View Profile", current_user, class: "links" %></li>
                         <li class="profile-li"><%= link_to "Account Settings", edit_user_registration_path, class: "links" %></li>
                         <li class="profile-li"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "links" %></li>
                     </ul>
