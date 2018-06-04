@@ -1,16 +1,18 @@
 <div class="container">
- <div class="row col-12-sm text-center justify-content-center" style="margin-bottom: 5rem;">
+ <div class="row col-12-sm justify-content-center" style="margin-bottom: 5rem;">
  <% @posts.reverse.each do |post| %>
-    <div class="poster-child row">
+    <div class="topiko-caro row">
     <div class="d-flex flex-wrap">
-      <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 35rem;">
+      <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
         <div class="card-body">
         <h4 class="card-title"><%= "#{@post.user.username}"%>
-        <h5 class="card-title">Title: <%= post.title %></h5>
-        <h6 class="card-subtitle mb-2 text-muted">Topic: <%= post.topic %></h6>
-        <p class="card-text">Content: <%= post.content %></p>
-        <li><%= link_to "View Post", post %></li>
+        <h6 class="card-subtitle mb-2 text-muted">Topic : <%= post.topic %></h6>
+        <h5 class="card-title"><%= post.title %></h5>
+        <p class="card-text"><%= post.content %></p>
+        <button class=" btn btn-outline-primary"><%= link_to "View Post", post %></button>
         </div>
+    </div>
+    </div>
     </div>
 <% end %>
     <div class="next">
