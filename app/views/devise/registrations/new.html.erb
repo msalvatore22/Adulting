@@ -14,6 +14,7 @@
       <%= f.label :username %>
       <%= f.text_field :username, :autofocus => true, class: 'form-control' %>
     </div>
+      <%= f.hidden_field :picture, value: "http://www.upplanet.com/bighero/outlay-demo/img/customer_avatar.png" %>
     <div class="form-group">
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
