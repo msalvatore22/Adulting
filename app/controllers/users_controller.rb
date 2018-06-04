@@ -9,6 +9,8 @@ class UsersController < ApplicationController
     @user = User.find_by(params[:id])
 
     @user_score = @user.score
+
+    @user = current_user
   end
 
   private
