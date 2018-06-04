@@ -36,14 +36,6 @@ ActiveRecord::Schema.define(version: 2018_06_02_163343) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "profiles", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "username"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "scores", force: :cascade do |t|
     t.integer "finance"
     t.integer "housing"
@@ -67,8 +59,6 @@ ActiveRecord::Schema.define(version: 2018_06_02_163343) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
-    t.string "userable_type"
-    t.integer "userable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "first_name"
@@ -76,7 +66,6 @@ ActiveRecord::Schema.define(version: 2018_06_02_163343) do
     t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["userable_type", "userable_id"], name: "index_users_on_userable_type_and_userable_id"
   end
 
 end
