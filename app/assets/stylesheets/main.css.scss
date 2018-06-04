@@ -83,6 +83,57 @@
     width: 100px;
     height: 100px;
 }
+.stroke {
+    position: relative;
+}
+.stroke:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #3ddad7;
+    height: 5px;
+    transition-delay: .5s
+}
+.stroke:hover:after {
+    width: 100%;
+}
+
+.shift {
+    position:relative;
+    z-index: 1;
+  }
+  .shift:hover {
+    color: #ffffff;
+  }
+  .shift:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #666;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+  }
+  .shift:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
+  
+
 .topiko-caro {
     padding-top: 50px;
     padding-left: 30px;

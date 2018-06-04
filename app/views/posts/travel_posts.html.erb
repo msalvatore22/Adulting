@@ -1,15 +1,13 @@
 <div class="container">
 <h1 class="header">Adulting on Travels <%= params[:travels] %></h1>
 
-<div class="row col-12-sm text-center justify-content-center" style="margin-bottom: 5rem;">
+<div class="row col-12-sm justify-content-center" style="margin-bottom: 5rem;">
 <% @posts.reverse.each do |post| %>
 <div class="topiko-caro row">
 <div class="d-flex flex-wrap">
-<div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 35rem;">
-<%# <div class="card-body" style="width: 2rem">  %>
- 
+<div class="card shadow-lg p-3 mb-5 bg-white rounded" style="width: 20rem;">
  <img class="post-img card-img-top" src="/assets/car.jpg" alt="Card image cap"> 
-<div class="avatar">
+<div class="avatar text-center">
 <img src="/assets/pic.png" alt="..." class="rounded-circle">
 </div>
   <div class="card-body">
