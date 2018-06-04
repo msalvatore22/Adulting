@@ -1,2 +1,15 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<div class="new-post card">
+<%= bootstrap_form_with(model: @post, local: true) do |f| %>
+
+<%= f.text_field :title, label: "Title:" %>
+
+<%= f.text_field :post_pic, label: "Paste a post image url here." %>
+
+<%= f.select :topic, ["Finance", "Housing", "Cars", "Travel", "Technology", "Lifestyle"], label: "Topic:" %>
+
+<%= f.text_area :content, label: "Content:" %>
+
+<%= f.hidden_field(:user_id, value: "#{@user.id}") %>
+<%= f.submit({:class=> 'btn btn-outline-primary'}) %>
+<% end %>
+</div>

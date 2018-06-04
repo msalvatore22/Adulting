@@ -28,10 +28,15 @@ class PostsController < ApplicationController
     @post = Post.new
 
     @user = User.find_by(params[:id])
+
+    @user = current_user
   end
 
   def edit
     @post = Post.find(params[:id])
+    @user = User.find_by(params[:id])
+
+    @user = current_user
   end
 
   def create
