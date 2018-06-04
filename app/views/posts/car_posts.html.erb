@@ -1,5 +1,5 @@
 <div class="container">
-<h1 class="header">Adulting on Cars <%= params[:cars] %></h1>
+<h1 class="header">Adulting on Cars</h1>
 
 <div class="row col-12-sm" style="margin-bottom: 5rem;">
 <% @posts.reverse.each do |post| %>
@@ -7,9 +7,9 @@
 <div class="d-flex flex-wrap">
 <div class="card shift shadow-lg p-3 mb-5 bg-white rounded" style="width: 20rem;">
 <div class="stroke">
- <img class="post-img card-img-top" src="<%= post.post_pic %>" alt="Card image cap"> 
+<%= image_tag "#{post.post_pic}", class: "post-img card-img-top" %> 
 <div class="avatar text-center">
-<img src="/assets/pic.png" alt="..." class="rounded-circle">
+<%= image_tag "#{@user.picture}", class: "rounded-circle" %>
 </div>
 </div>
   <div class="card-body">
@@ -23,26 +23,6 @@
 </div>
 <% end %>
 
-<div class="next">
-  <nav aria-label="...">
-  <ul class="pagination">
-    <li class="page-item disabled">
-      <span class="page-link">Previous</span>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active">
-      <span class="page-link">
-        2
-        <span class="sr-only">(current)</span>
-      </span>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
-</div>
  
 
 
