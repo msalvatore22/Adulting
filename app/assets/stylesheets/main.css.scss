@@ -28,7 +28,6 @@ footer {
 .topic-head {
     padding-left: 50px;
     padding-top: 30px;
-    // font-family: 'Julius Sans One', sans-serif;
 }
 
 .overlay {
@@ -62,20 +61,12 @@ footer {
     padding: 50px 120px 50px 120px;
 }
 
-.topic {
-    // font-family: Arial, Helvetica, sans-serif;
-}
-
 .poster-child {
     padding-top: 50px;
 }
 
 .next {
     padding-left: 400px;
-}
-
-.user-name {
-    // font-family: 'League Gothic', sans-serif;
 }
 
 .card {
@@ -85,21 +76,26 @@ footer {
 .card-img-top {
     object-fit: cover;
 }
+
 .img-user {
     height: 40px;
     width: 40px;
 }
+
 .user-pro {
     padding-top: 50px;
 }
+
 .post-img {
     width: 285px;
     height: 190px;
 }
+
 .header {
     padding-top: 60px;
     padding-left: 100px;
 }
+
 .avatar img {
     position: relative;
     border: 3px solid #cdcdcd;
@@ -189,71 +185,6 @@ footer {
       color: #2a93d5;
   }
 
-
-//   .post-avatar {
-//     border: 3px solid #999;
-//     -webkit-border-radius: 30px;
-//     height: 18px;
-//     width: 18px;
-//     position: absolute;
-//     left:20px;
-//     top:214px;
-//     -webkit-animation: pulsate 1s ease-out;
-//     -webkit-animation-iteration-count: infinite; 
-//     opacity: 0.0
-// }
-// @-webkit-keyframes pulsate {
-//     0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
-//     50% {opacity: 1.0;}
-//     100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
-// }
-// .post-avatar {
-//     border: 2px solid #fff;
-//     -webkit-border-radius: 50%;
-//     height: 18px;
-//     width: 18px;
-//     position: absolute;
-//     left:20px;
-//    top:214px;
-//    -webkit-animation: pulsate 2s ease-out;
-//    -webkit-animation-iteration-count: infinite; 
-//    opacity: 0.0;
-// }
-// .post-avatar:before {
-//    content:"";
-//    display:block;
-//    border: 2px solid #fff;
-//    -webkit-border-radius: 50%;
-//    height: 30px;
-//    width: 30px;
-//    position: absolute;
-//    left:-8px;
-//    top:-8px;
-//    -webkit-animation: pulsate 1s ease-out;
-//    -webkit-animation-iteration-count: infinite; 
-//    -webkit-animation-delay: 0.1s;
-//    opacity: 0.0;
-// }
-// .post-avatar:after {
-//    content:"";
-//    display:block;
-//    border:2px solid #fff;
-//    -webkit-border-radius: 50%;
-//    height: 50px;
-//    width: 50px;
-//    position: absolute;
-//    left:-18px;
-//    top:-18px;
-//    -webkit-animation: pulsate 1s ease-out;
-//    -webkit-animation-iteration-count: infinite; 
-//    -webkit-animation-delay: 0.2s;
-//    opacity: 0.0;
-// }
-// @-webkit-keyframes pulsate {
-//    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
-//    50% {opacity: 1.0;}
-//    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
-// }
 .post-avatar img {
     border-radius: 9999px;
     height: 100%;
@@ -287,25 +218,6 @@ footer {
     }
 }
 
-//   .post-avatar::before,
-//   .post-avatar::after {
-//     animation: pulse 2s linear infinite;
-//     border: #fff solid 8px;
-//     border-radius: 9999px;
-//     box-sizing: border-box;
-//     content: ' ';
-//     height: 140%;
-//     left: -20%;
-//     opacity: .6;
-//     position: absolute;
-//     top: -20%;
-//     transform: scale(0.714);
-//     width:100%;
-//     z-index: 1;
-//   }
-//   .post-avatar::after {
-//     animation-delay: 1s;
-//   }
 .post-avatar:hover::before,
 .post-avatar:hover::after {
     animation: pulse 1s infinite;
@@ -321,7 +233,6 @@ footer {
     padding-right: 30px;
 }
 
-
 .topiko-caro.ci-style-4 {
     padding: 1.5em;
     position: relative;
@@ -334,7 +245,6 @@ footer {
     top: 0;
     left: 0;
     padding: 0.8em;
-    /* background-color: white; */
 }
 
 .topiko-caro.ci-style-4 .ci-date span {
@@ -376,7 +286,6 @@ footer {
 }
 
 .content_n10s.ci-style-4.format-video .ci-textcontent-wrap.ci-style-4 {
-    /* no hover effect on video post types */
     -webkit-transform: translateY(0);
     transform: translateY(0);
 }
@@ -480,7 +389,6 @@ footer {
 
 .topiko-caro.ci-style-4 .ci-extra-comment::before {
     content: "v";
-    /*speech bubble*/
 }
 
 #flipkart-navbar {
@@ -568,7 +476,6 @@ footer {
     display: inline-block;
     padding: 0 11px;
     line-height: 23px;
-    // font-family: 'Roboto', sans-serif;
     letter-spacing: 0;
     color: inherit;
     border: none;
@@ -576,7 +483,7 @@ footer {
     font-size: 12px;
 }
 
-.shake {}
+
 
 .shake:hover {
     animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
@@ -696,8 +603,6 @@ footer {
     }
 }
 
-/*Sidenav*/
-
 .sidenav {
     height: 100%;
     width: 0;
@@ -741,7 +646,7 @@ footer {
     color: #fff;
 }
 
-/* CSS used here will be applied after bootstrap.css */
+
 
 .badge-notify {
     background: red;
@@ -750,7 +655,7 @@ footer {
     left: -35px;
 }
 
-/* NAVIGATION */
+
 
 nav {
     width: 90%;
@@ -787,8 +692,6 @@ nav ul li a:before {
 nav ul li a:hover {
     color: #555;
 }
-
-/* stroke */
 
 nav.stroke ul li a,
 nav.fill ul li a {
@@ -860,28 +763,26 @@ nav.fill ul li a:hover:after {
 }
 
 
-    .h1{
-        font-weight: 300;
-    }
-    
-    .form-control{
-        border: 1px solid #b84492;
-    
-    }
+.h1{
+    font-weight: 300;
+}
 
-    .form-control2{
-        border: 1px solid #b84492;
-        width: 50%
-    
-    }
+.form-control{
+    border: 1px solid #b84492;
+}
 
-    .flipkart-navbar-input {
-        width: 90%;
-    }
+.form-control2{
+    border: 1px solid #b84492;
+    width: 50%
+}
 
-    .border-primary {
-        border: solid #4c4c4c 9px !important;
-    }
+.flipkart-navbar-input {
+    width: 90%;
+}
+
+.border-primary {
+    border: solid #4c4c4c 9px !important;
+}
 
 .top-m{
     margin-top:150px;

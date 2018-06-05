@@ -2,8 +2,7 @@
 
 <% if @user_score %>
 <div class="user-pro container">
-
-<div class="row col-12-sm text-center justify-content-center top-m2">
+  <div class="row col-12-sm text-center justify-content-center top-m2">
    <div class="d-flex flex-wrap">
      <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 35rem;">
      <br></br>
@@ -13,7 +12,6 @@
        <hr>
        <div class="card-body">
        <h5 class="card-title">My Adulting Score</h5>
-
        <hr>
        <h6 class="card-subtitle mb-2 text-muted">Finance: <%= @user_score.finance %> out of 10 </h6>
        <hr>
@@ -35,7 +33,6 @@
 <%= link_to "Create Your Adulting Score!", new_score_path %>
 <% end %>
 </div>
-
 <div class="row col-12-sm">
    <% @user.posts.reverse.each do |post| %>
      <div class="topiko-caro row">
