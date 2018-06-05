@@ -19,6 +19,10 @@ class LikesController < ApplicationController
     redirect_to posts_url
   end
 
+  def show
+    @likes = Like.where(params[:id])
+  end
+
   private
 
   def like_params

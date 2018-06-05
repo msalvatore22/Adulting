@@ -58,7 +58,7 @@
 
           <!-- Likes Form -->
           <div class="card my-4">
-            <h5 class="card-header">Like post: <%= @like_count %></h5>
+            <h5 class="card-header">Like post: <%= link_to @like_count, like_path %></h5>
             <div class="card-body">
               <%= bootstrap_form_for(@like) do |f| %>
                 <%= f.hidden_field(:post_id, value: "#{@post.id}") %>
