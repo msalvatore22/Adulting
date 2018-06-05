@@ -9,7 +9,7 @@
             <div class="pulsated">
               <%= image_tag "#{post.post_pic}", class: "post-img card-img-top" %>
                 <div class="avatar">
-                   <%= image_tag "#{@user.picture}", class: "rounded-circle" %>
+                   <%= image_tag "#{post.user.picture}", class: "rounded-circle" %>
                 </div>
             </div>
             <div class="card-body">
