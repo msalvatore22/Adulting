@@ -24,7 +24,7 @@
           </p>
 
           <hr>
-          <p>Created on: <%= @post.created_at %></p>
+          <p>Created <%= time_ago_in_words(@post.created_at) %> ago.</p>
 
           <hr>
           <%= image_tag "#{@post.post_pic}", class: "img-fluid rounded" %>
