@@ -7,12 +7,12 @@ font-family: 'Fredoka One', cursive;
 }
 
 footer {
-    
+    position: fixed;
     height: 200px;
     bottom: 0;
     width: 100%;
     margin-top: 50px;
-
+    z-index: 998;
 }
 
 .first-deck,
@@ -321,15 +321,7 @@ footer {
     padding-right: 30px;
 }
 
-// .topiko-caro.ci-style-4 {
-//     min-height: 100px;
-//     position: relative;
-//     overflow: hidden;
-//     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.2), 0 15px 12px rgba(0, 0, 0, 0.1);
-// 	background-size: cover;
-// 	background-repeat: no-repeat;
-// 	background-position: center center;
-// }
+
 .topiko-caro.ci-style-4 {
     padding: 1.5em;
     position: relative;
@@ -495,6 +487,8 @@ footer {
     width: 100%;
     background-color: #2874f0;
     color: #FFFFFF;
+    position: fixed;
+    z-index: 999;
 }
 
 .row1 {
