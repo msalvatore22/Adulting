@@ -20,7 +20,7 @@ class LikesController < ApplicationController
   end
 
   def show
-    @likes = Like.where(params[:id])
+    @likes = Like.where(post_id: params[:id])
   end
 
   private
