@@ -1,12 +1,5 @@
 
 <div class="container">
-<h3>User</h3>
-
-<p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
-<p>Username: <%= @user.username %> </p>
-<p>Picture: <%= image_tag "#{@user.picture}", class: "rounded-circle" %></p>
-
-
 
 <% if @user_score %>
 <div class="user-pro container">
@@ -45,7 +38,7 @@
 </div>
 
 <div class="row col-12-sm">
-    <% @user.posts.each do |post| %>
+    <% @user.posts.reverse.each do |post| %>
       <div class="topiko-caro row">
         <div class="d-flex flex-wrap">
           <div class="card shift shadow-lg p-3 mb-5 bg-white rounded" style="width: 20rem;">
