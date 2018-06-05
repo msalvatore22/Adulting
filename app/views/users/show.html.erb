@@ -1,26 +1,30 @@
-<div class="container">
-<h3>User</h3>
-
-<p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
-<p>Username: <%= @user.username %> </p>
-<p>Picture: <%= image_tag "#{@user.picture}", class: "rounded-circle" %></p>
-
-
 
 <% if @user_score %>
-<div class="container">
+<div class="user-pro container">
 
  <div class="row col-12-sm text-center justify-content-center">
     <div class="d-flex flex-wrap">
       <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 35rem;">
+      <br></br>
+      <div class="avatar"><%= image_tag "#{@user.picture}", class: "rounded-circle" %></div>
+        <h4><%= @user.first_name %> <%= @user.last_name %></h4>
+        <p>Username: <%= @user.username %> </p>
+        <hr>
         <div class="card-body">
         <h5 class="card-title">My Adulting Score</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Finance: 10 out of <%= @user_score.finance %></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Housing: <%= @user_score.housing %></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Cars: <%= @user_score.cars %></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Travel: <%= @user_score.travel %></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Technology: <%= @user_score.technology %></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Lifestyle: <%= @user_score.lifestyle %></h6>
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Finance: <%= @user_score.finance %> out of 10 </h6>
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Housing: <%= @user_score.housing %> out of </h6>
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Cars: <%= @user_score.cars %> out of 10 </h6>
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Travel: <%= @user_score.travel %> out of 10 </h6>
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Technology: <%= @user_score.technology %> out of 10</h6>
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Lifestyle: <%= @user_score.lifestyle %> out of 10</h6>
+        <hr>
         <%= link_to "Update Your Adulting Score!", edit_score_path %>
         </div>
     </div>

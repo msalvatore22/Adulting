@@ -85,12 +85,21 @@ footer {
 .card-img-top {
     object-fit: cover;
 }
-
+.img-user {
+    height: 40px;
+    width: 40px;
+}
+.user-pro {
+    padding-top: 50px;
+}
 .post-img {
     width: 285px;
     height: 190px;
 }
-
+.header {
+    padding-top: 60px;
+    padding-left: 100px;
+}
 .avatar img {
     position: relative;
     border: 3px solid #cdcdcd;

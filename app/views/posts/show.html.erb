@@ -64,21 +64,26 @@
               <% end %>
             </div>
           </div>
-
+<br> </br>
           <!-- Single Comment -->
+          <div class="container form-group">
           <% @post.comments.each do |comment| %>
-          <div class="media mb-4">
+          <div class="avatar media mb-4">
             <%= image_tag "#{comment.user.picture}", class: "d-flex mr-3 rounded-circle" %>
             <div class="media-body">
               <h5 class="mt-0"><%= comment.user.username %></h5>
               <%= comment.content %>
+            <hr>
             </div>
+
+            <br></br>
+            <br></br>
             <% if comment.user_id == current_user.id %>
               <%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %>
             <% end %>
           </div>
           <% end %>
-
+        </div>
         </div>
 
 
