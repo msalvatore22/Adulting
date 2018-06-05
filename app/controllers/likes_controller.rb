@@ -8,7 +8,7 @@ class LikesController < ApplicationController
     
     @like = Like.new(like_params)
     if @like.save
-      redirect_to posts_url
+      redirect_to url_for(:controller => :posts, :action => :show, :id => like_params[:post_id])
     else
       render :action => 'new'
     end

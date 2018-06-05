@@ -40,6 +40,9 @@
             <p class="lead">
             by
             <%= "#{@post.user.first_name}"%> <%= "#{@post.user.last_name}" %>
+            <% if @post.user_id == current_user.id %>
+              <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
           </p>
 
           <hr>
@@ -89,6 +92,9 @@
               <h5 class="mt-0"><%= comment.user.username %></h5>
               <%= comment.content %>
             </div>
+            <% if comment.user_id == current_user.id %>
+              <%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+            <% end %>
           </div>
           <% end %>
 
