@@ -20,7 +20,7 @@
             <%= "#{@post.user.first_name}"%> <%= "#{@post.user.last_name}" %>
             <% if @post.user_id == current_user.id %>
               <%= link_to 'Delete this post. ', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
-              <%= link_to 'Edit this post. ', edit_post_path(@post), method: :update %>
+              <%= link_to 'Edit this post. ', edit_post_path(@post) %>
             <% end %>
           </p>
 
