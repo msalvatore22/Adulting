@@ -865,14 +865,21 @@ nav.fill ul li a:hover:after {
     font-size: 24px;
 }
 
-.h1 {
-    font-weight: 300;
-}
 
-.form-control {
-    border: 1px solid #b84492;
-}
+    .h1{
+        font-weight: 300;
+    }
+    
+    .form-control{
+        border: 1px solid #b84492;
+        width: 35%;
+    }
 
-.flipkart-navbar-input {
-    width: 90%;
-}
+    .flipkart-navbar-input {
+        width: 90%;
+    }
+
+    .border-primary {
+        border: solid #4c4c4c 9px !important;
+    }
+
