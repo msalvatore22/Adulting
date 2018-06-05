@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
     @user = User.find_by(params[:id])
 
     if @comment.save
-      redirect_to url_for(:controller => :posts, :action => :show, :id => @post.id)
+      redirect_to url_for(:controller => :posts, :action => :show, :id => @comment.post_id)
     else
       render :action => 'new'
     end
