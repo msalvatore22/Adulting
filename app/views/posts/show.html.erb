@@ -8,7 +8,7 @@
         <div class="col-lg-8">
 
           <!-- Title -->
-          <h1 class="mt-4"><%= @post.title %></h1>
+          <h1 class="mt-4">Title: <%= @post.title %></h1>
 
           <!-- Author -->
           <p class="lead">
@@ -16,7 +16,7 @@
             <%= @post.topic %>
           </p>
             <p class="lead">
-            by
+            by:
             <%= "#{@post.user.first_name}"%> <%= "#{@post.user.last_name}" %>
             <% if @post.user_id == current_user.id %>
               <%= link_to 'Delete this post. ', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -24,7 +24,7 @@
           </p>
 
           <hr>
-          <p>Posted on January 1, 2018 at 12:00 PM</p>
+          <p>Created on: <%= @post.created_at %></p>
 
           <hr>
           <%= image_tag "#{@post.post_pic}", class: "img-fluid rounded" %>
