@@ -6,12 +6,23 @@ body {
 font-family: 'Fredoka One', cursive;
 }
 
+footer {
+    
+    height: 200px;
+    bottom: 0;
+    width: 100%;
+    margin-top: 100px;
 
+}
 
 .first-deck,
 .second-deck {
     padding-left: 50px;
     padding-right: 50px;
+}
+
+.second-deck {
+    margin-bottom: 200px;
 }
 
 .topic-head {
@@ -461,6 +472,7 @@ font-family: 'Fredoka One', cursive;
 }
 
 #flipkart-navbar {
+    width: 100%;
     background-color: #2874f0;
     color: #FFFFFF;
 }
