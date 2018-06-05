@@ -1,16 +1,7 @@
-
-    <!-- Page Content -->
-    <div class="container">
-
-      <div class="row justify-content-center">
-
-        <!-- Post Content Column -->
-        <div class="col-lg-8 top-m">
-
-          <!-- Title -->
-          <h1 class="mt-4">Title: <%= @post.title %></h1>
-
-          <!-- Author -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 top-m">
+      <h1 class="mt-4">Title: <%= @post.title %></h1>
           <p class="lead">
             Topic:
             <%= @post.topic %>
@@ -25,23 +16,12 @@
           </p>
 
           <hr>
-
-
-          <!-- Date/Time -->
-         
           <p>Created <%= time_ago_in_words(@post.created_at) %> ago.</p>
-
-
           <hr>
           <%= image_tag "#{@post.post_pic}", class: "img-fluid rounded" %>
-          <!-- Preview Image -->
-         
-
           <hr>
             <%= @post.content %>
           <hr>
-
-          <!-- Likes Form -->
           <div class="card my-4">
             <h5 class="card-header">Like post: <%= link_to @like_count, like_path %></h5>
             <div class="card-body">
@@ -52,8 +32,6 @@
               <% end %>
             </div>
           </div>
-
-          <!-- Comments Form -->
           <div class="card my-4">
             <h5 class="card-header">Leave a Comment:</h5>
             <div class="card-body">
@@ -66,7 +44,6 @@
             </div>
           </div>
 <br> </br>
-          <!-- Single Comment -->
           <div class="container form-group">
           <% @post.comments.each do |comment| %>
           <div class="avatar media mb-4">
@@ -85,12 +62,7 @@
           </div>
           <% end %>
         </div>
-        </div>
-
-
       </div>
-      <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
+  </div>
+</div>
 
