@@ -3,8 +3,8 @@
 
   <div class="row col-12-sm">
     <% @posts.reverse.each do |post| %>
-      <div class="topiko-caro row">
-        <div class="d-flex flex-wrap">
+      <div class="topiko-caro row justify-content-center">
+        <div class="d-flex flex-wrap top-m">
           <div class="card shift shadow-lg p-3 mb-5 bg-white rounded" style="width: 20rem;">
             <div class="pulsated">
               <%= image_tag "#{post.post_pic}", class: "post-img card-img-top" %>

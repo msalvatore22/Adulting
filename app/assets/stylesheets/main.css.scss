@@ -866,7 +866,13 @@ nav.fill ul li a:hover:after {
     
     .form-control{
         border: 1px solid #b84492;
-        width: 35%;
+    
+    }
+
+    .form-control2{
+        border: 1px solid #b84492;
+        width: 50%
+    
     }
 
     .flipkart-navbar-input {
@@ -877,3 +883,10 @@ nav.fill ul li a:hover:after {
         border: solid #4c4c4c 9px !important;
     }
 
+.top-m{
+    margin-top:150px;
+}
+
+.top-m2{
+    margin-top:200px;
+}

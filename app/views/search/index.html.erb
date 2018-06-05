@@ -4,7 +4,7 @@
 <% else %>
  <div class="row col-12-sm text-center justify-content-center" style="margin-bottom: 5rem;">
  <% @posts.reverse.each do |post| %>
-    <div class="d-flex flex-wrap">
+    <div class="d-flex flex-wrap top-m2">
       <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 35rem;">
         <div class="card-body">
         <h4 class="card-title"><%= "#{post.user.username}"%>
@@ -15,25 +15,7 @@
         </div>
     </div>
 <% end %>
-    <div class="next">
-      <nav aria-label="...">
-      <ul class="pagination">
-        <li class="page-item disabled">
-          <span class="page-link">Previous</span>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item active">
-          <span class="page-link">
-            2
-            <span class="sr-only">(current)</span>
-          </span>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#">Next</a>
-        </li>
-      </ul>
-    </nav>
+   
 <% end %>
 
 <% if @users.blank? %>

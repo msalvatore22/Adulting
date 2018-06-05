@@ -1,39 +1,47 @@
-<div style="padding-top:10px; margin: 0 auto; border-left: 2px solid black; width: 50%; float:right; height:255px; overflow-x:hidden; overflow-y:scroll;">
+
+<div class="row" style="width:100%;">
+
+<section class="top-m2"style="width:50%; height:255px;overflow-x:hidden; overflow-y:scroll;">
+<section style="width:50%; border:solid black 2px; float:right">
+
 <div class="authform" style="margin-left:10px;">
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f| %>
     <h3>Sign up</h3>
     <%= devise_error_messages! %>
     <div class="form-group">
       <%= f.label :first_name %>
-      <%= f.text_field :first_name, :autofocus => true, class: 'form-control' %>
+      <%= f.text_field :first_name, :autofocus => true, class: 'form-control2' %>
     </div>
     <div class="form-group">
       <%= f.label :last_name %>
-      <%= f.text_field :last_name, :autofocus => true, class: 'form-control' %>
+      <%= f.text_field :last_name, :autofocus => true, class: 'form-control2' %>
     </div>
     <div class="form-group">
       <%= f.label :username %>
-      <%= f.text_field :username, :autofocus => true, class: 'form-control' %>
+      <%= f.text_field :username, :autofocus => true, class: 'form-control2' %>
     </div>
       <%= f.hidden_field :picture, value: "http://www.upplanet.com/bighero/outlay-demo/img/customer_avatar.png" %>
     <div class="form-group">
       <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+      <%= f.email_field :email, class: 'form-control2' %>
     </div>
     <div class="form-group">
       <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+      <%= f.password_field :password, class: 'form-control2' %>
     </div>
     <div class="form-group">
       <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <%= f.password_field :password_confirmation, class: 'form-control2' %>
     </div>
      <%= f.submit 'Sign up', :class => 'button right' %>
   <% end %>
-</div>
-</div>
+  </section>
+</section>
 
-<div style="padding-top:10px; margin: 0 auto; border: 2px solid black; width: 50%; height:255px; text-align:center;">
+
+<section class ="top-m2"style="width:50%; height:255px;">
+<section style="width:50%; border:solid black 2px; height:255px;">
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <h3>Log in</h3>
   <div class="field">
@@ -61,5 +69,9 @@
 <%= render "devise/shared/links" %>
 
 </div>
+</section>
+</section>
+
 
 </div>
+
