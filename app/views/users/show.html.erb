@@ -1,26 +1,72 @@
-<h3>User</h3>
-<p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
-<p>Username: <%= @user.username %> </p>
-<p>Picture: <img src="<%= @user.picture %>"/></p>
 
+<div class="container">
 
 <% if @user_score %>
-<div class="container">
- <div class="row col-12-sm text-center justify-content-center" style="margin-bottom: 5rem;">
+<div class="user-pro container">
+
+ <div class="row col-12-sm text-center justify-content-center">
     <div class="d-flex flex-wrap">
       <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 35rem;">
+      <br></br>
+      <div class="avatar"><%= image_tag "#{@user.picture}", class: "rounded-circle" %></div>
+        <h4><%= @user.first_name %> <%= @user.last_name %></h4>
+        <p>Username: <%= @user.username %> </p>
+        <hr>
         <div class="card-body">
         <h5 class="card-title">My Adulting Score</h5>
-        <h6 class="card-subtitle mb-2 text-muted">Finance: <%= @user_score.finance %></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Housing: <%= @user_score.housing %></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Cars: <%= @user_score.cars %></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Travel: <%= @user_score.travel %></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Technology: <%= @user_score.technology %></h6>
-        <h6 class="card-subtitle mb-2 text-muted">Lifestyle: <%= @user_score.lifestyle %></h6>
+
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Finance: <%= @user_score.finance %> out of 10 </h6>
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Housing: <%= @user_score.housing %> out of </h6>
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Cars: <%= @user_score.cars %> out of 10 </h6>
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Travel: <%= @user_score.travel %> out of 10 </h6>
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Technology: <%= @user_score.technology %> out of 10</h6>
+        <hr>
+        <h6 class="card-subtitle mb-2 text-muted">Lifestyle: <%= @user_score.lifestyle %> out of 10</h6>
+        <hr>
+
         <%= link_to "Update Your Adulting Score!", edit_score_path %>
         </div>
     </div>
 <% else %>
 <%= link_to "Create Your Adulting Score!", new_score_path %>
+<% end %>
+</div>
+
+<div class="row col-12-sm">
+    <% @user.posts.reverse.each do |post| %>
+      <div class="topiko-caro row">
+        <div class="d-flex flex-wrap">
+          <div class="card shift shadow-lg p-3 mb-5 bg-white rounded" style="width: 20rem;">
+            <div class="pulsated">
+              <%= image_tag "#{post.post_pic}", class: "post-img card-img-top" %>
+                <div class="avatar">
+                   <%= image_tag "#{post.user.picture}", class: "rounded-circle" %>
+                </div>
+            </div>
+            <div class="card-body">
+              <p class="post-meta">
+                <span class="published">Posted <%= time_ago_in_words(post.created_at) %> ago by</span>
+                <span class="meta-separator post-meta"> - </span>
+                <span h7 class="card-title">
+                  <%= link_to post.user.username, current_user %>
+                </span>
+                <h5 class="card-title card-dark">
+                  <%= post.title %>
+                </h5>
+                <p class="card-text">
+                  <%= post.content %>
+                </p>
+                <btn class="btn btn-outline-primary">
+                  <%= link_to "View Post", post %>
+                </btn>
+            </div>
+          </div>
+        </div>
+      </div>
 <% end %>
 

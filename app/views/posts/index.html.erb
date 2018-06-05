@@ -1,59 +1,37 @@
 <div class="container">
-  <div class="row col-12-sm justify-content-center" style="margin-bottom: 5rem;">
+  <h1 class="header">Post</h1>
+
+  <div class="row col-12-sm">
     <% @posts.reverse.each do |post| %>
-    <div class="topiko-caro row">
-      <div class="d-flex flex-wrap">
-        <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 20rem;">
-        <div class="post-avatar text-center">
-<img src="/assets/pic.png" alt="..." class="rounded-circle">
-</div>
-          <div class="card-body">
+      <div class="topiko-caro row">
+        <div class="d-flex flex-wrap">
+          <div class="card shift shadow-lg p-3 mb-5 bg-white rounded" style="width: 20rem;">
+            <div class="pulsated">
+              <%= image_tag "#{post.post_pic}", class: "post-img card-img-top" %>
+                <div class="avatar">
+                   <%= image_tag "#{post.user.picture}", class: "rounded-circle" %>
+                </div>
+            </div>
+            <div class="card-body">
               <p class="post-meta">
-                <span class="published content">2 months ago</span>
+                <span class="published">Posted <%= time_ago_in_words(post.created_at) %> ago by</span>
                 <span class="meta-separator post-meta"> - </span>
                 <span h7 class="card-title">
                   <%= link_to post.user.username, current_user %>
                 </span>
-
-                <h4 class="card-title">Title:
+                <h5 class="card-title card-dark">
                   <%= post.title %>
-                    </h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Topic:
-                      <%= post.topic %>
-                    </h6>
-                    <p class="card-text">Content:
-                      <%= post.content %>
-                    </p>
-                    <btn class="btn btn-outline-primary">
-                      <%= link_to "View Post", post %>
-                    </btn>
+                </h5>
+                <p class="card-text">
+                  <%= post.content %>
+                </p>
+                <btn class="btn btn-outline-primary">
+                  <%= link_to "View Post", post %>
+                </btn>
+            </div>
           </div>
         </div>
       </div>
-  </div>
-  </div>
-  <% end %>
-    <div class="next">
-      <nav aria-label="...">
-        <ul class="pagination">
-          <li class="page-item disabled">
-            <span class="page-link">Previous</span>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">1</a>
-          </li>
-          <li class="page-item active">
-            <span class="page-link">
-              2
-              <span class="sr-only">(current)</span>
-            </span>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">3</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+
+      <% end %>
+   

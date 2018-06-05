@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     if params[:search]
       @posts = Post.where('topic LIKE ?', "%#{params[:search]}%")
     else
+      @user = User.find_by(params[:id])
       @posts = Post.all
     end
   end
@@ -34,8 +35,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
-    @user = User.find_by(params[:id])
-
+    # @user = User.find_by(params[:id])
     @user = current_user
   end
 
@@ -70,27 +70,33 @@ class PostsController < ApplicationController
 
   def car_posts
     @posts = Post.where(topic: 'Cars').all
-
+    @user = current_user
   end
 
   def finance_posts
     @posts = Post.where(topic: 'Finance').all
+    @user = current_user
   end
 
   def housing_posts
     @posts = Post.where(topic: 'Housing').all
+    @user = current_user
   end
 
   def lifestyle_posts
     @posts = Post.where(topic: 'Lifestyle').all
+    @user = current_user
   end
 
   def technology_posts
     @posts = Post.where(topic: 'Technology').all
+    @user = current_user
+
   end
 
   def travel_posts
     @posts = Post.where(topic: 'Travel').all
+    @user = current_user
   end
 
   private

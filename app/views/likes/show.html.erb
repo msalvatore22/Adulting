@@ -1,2 +1,10 @@
-<h1>Likes#show</h1>
-<p>Find me in app/views/likes/show.html.erb</p>
+<div class="container">
+  <h3 class="header">Who liked post</h3>
+  <div class="col-12-sm" style="margin-bottom: 5rem;">
+    <% @likes.each do |like| %>
+      <div class="avatar-like">
+        <%= image_tag "#{like.user.picture}", class: "rounded-circle" %> <%= like.user.username %>
+      </div>
+    <% end %>
+  </div>
+</div>

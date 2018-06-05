@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
     @user = User.find_by(params[:id])
 
     if @comment.save
-      redirect_to posts_url
+      redirect_to url_for(:controller => :posts, :action => :show, :id => @comment.post_id)
     else
       render :action => 'new'
     end
@@ -42,8 +42,9 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    post_id = Comment.find(params[:id]).post_id
     Comment.find(params[:id]).destroy
-    redirect_to :action => 'index'
+    redirect_to url_for(:controller => :posts, :action => :show, :id => post_id)
   end
 
   private
