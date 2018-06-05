@@ -35,8 +35,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
-    @user = User.find_by(params[:id])
-
+    # @user = User.find_by(params[:id])
     @user = current_user
   end
 
