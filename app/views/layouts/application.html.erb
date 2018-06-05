@@ -13,7 +13,7 @@
   <div id="flipkart-navbar" style="background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); box-shadow: 5px 5px 3px grey;">
     
      <span>
-    <%= link_to image_tag("logo.png"), home_index_path, style: "margin-top:28px; position:absolute; padding-left:40px;"%>
+    <%= link_to image_tag("logo.png"), home_index_path, style: "margin-top:35px; position:absolute; padding-left:40px;"%>
     </span>
     
     <div class="container">
@@ -96,13 +96,7 @@
     <div class="row">
 
       <!-- Grid column -->
-      <div class="col-md-4 mx-auto">
-
-        <!-- Content -->
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
-        <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-      </div>
+     
       <!-- Grid column -->
 
       <hr class="clearfix w-100 d-md-none">
@@ -180,7 +174,8 @@
   <ul class="list-unstyled list-inline text-center py-2">
     <% if user_signed_in? %>
       <li class="list-inline-item">
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
+     
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-outline-danger"%>
       </li>
     <% else %>
       <li class="list-inline-item">
@@ -229,7 +224,7 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> Adulting.com</a>
+    <a href="https://mdbootstrap.com/bootstrap-tutorial/" style="color:white;"> Adulting.com</a>
   </div>
   <!-- Copyright -->
 

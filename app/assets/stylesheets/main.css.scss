@@ -772,8 +772,13 @@ nav {
     
     .form-control{
         border: 1px solid #b84492;
+        width: 35%;
     }
 
     .flipkart-navbar-input {
         width: 90%;
+    }
+
+    .border-primary {
+        border: solid #4c4c4c 9px !important;
     }
