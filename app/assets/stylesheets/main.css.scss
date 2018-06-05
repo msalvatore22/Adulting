@@ -79,14 +79,14 @@
 }
 .avatar img{
     position: relative;
-    border: 5px solid rgba(255,255,255,0.5);
+    border: 3px solid #cdcdcd;
 	top: -50px;
 	margin-bottom: -50px;
 }
 .avatar img {
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    border-radius: 30%;
+    width: 70px;
+    height: 70px;
 }
 
 .stroke {
@@ -139,6 +139,15 @@
     visibility: visible;
     height: 100%;
   }
+
+  .adulting-picture {
+      height: 20px;
+      width: 20px;
+  }
+  .btn {
+      color: #2a93d5;
+  }
+
 //   .post-avatar {
 //     border: 3px solid #999;
 //     -webkit-border-radius: 30px;

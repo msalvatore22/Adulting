@@ -8,12 +8,17 @@
 <div class="card shift shadow-lg p-3 mb-5 bg-white rounded" style="width: 20rem;">
 <div class="stroke">
 <%= image_tag "#{post.post_pic}", class: "post-img card-img-top" %> 
-<div class="avatar text-center">
+<div class="avatar">
 <%= image_tag "#{@user.picture}", class: "rounded-circle" %>
+<br></br>
+<section>
+<span class="published">Posted <%= time_ago_in_words(post.created_at) %> ago by </span>
+<span h7 class="card-title"><%= link_to post.user.username, current_user %> </span>
+<%# <%= post.like(User).count%>  
+</section>
 </div>
 </div>
- <div class="card-body">
-   <h4 class="card-title"><%= post.user.username %>
+ <div class="card-body"> 
    <h5 class="card-title card-dark"> <%= post.title %></h5>
    <p class="card-text"><%= post.content %></p>
    <btn class="btn btn-outline-primary"> <%= link_to "Read More", post %></btn>
