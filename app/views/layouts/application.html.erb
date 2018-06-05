@@ -5,6 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Fredoka+One", "application" %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -64,30 +66,12 @@
         </div>
     </div>
 </div>
-<div id="mySidenav" class="sidenav">
-    <div class="container" style="background-color: #2874f0; padding-top: 10px;">
-        <span class="sidenav-heading">Home</span>
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-    </div>
-    <li class="upper-links"><%= link_to "Finances", posts_finance_path, class: "links" %></li>
-  <li class="upper-links"><%= link_to "Housing", posts_housing_path, class: "links" %></li>
-  <li class="upper-links"><%= link_to "Cars", posts_cars_path, class: "links" %></li>
-  <li class="upper-links"> <%= link_to "Travel", posts_travel_path, class: "links" %></li>
-  <li class="upper-links"> <%= link_to "Technology", posts_technology_path, class: "links" %></li>
-  <li class="upper-links">   <%= link_to "Lifestyle", posts_lifestyle_path, class: "links" %></li>
-</div>
+
 <%= yield %>
-<ul>
-  <li class="upper-links"><%= link_to "Finances", posts_finance_path, class: "links" %></li>
-  <li class="upper-links"><%= link_to "Housing", posts_housing_path, class: "links" %></li>
-  <li class="upper-links"><%= link_to "Cars", posts_cars_path, class: "links" %></li>
-  <li class="upper-links"> <%= link_to "Travel", posts_travel_path, class: "links" %></li>
-  <li class="upper-links"> <%= link_to "Technology", posts_technology_path, class: "links" %></li>
-  <li class="upper-links">   <%= link_to "Lifestyle", posts_lifestyle_path, class: "links" %></li>
-</ul>
+
 
 <!-- Footer -->
-<footer class="page-footer font-small stylish-color-dark pt-4 mt-4" style="background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); color: white;">
+<footer class="page-footer font-small stylish-color-dark" style="background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); color: white;">
 
   <!-- Footer Links -->
   <div class="container text-center text-md-left">
@@ -96,13 +80,7 @@
     <div class="row">
 
       <!-- Grid column -->
-      <div class="col-md-4 mx-auto">
-
-        <!-- Content -->
-        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Footer Content</h5>
-        <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-      </div>
+      
       <!-- Grid column -->
 
       <hr class="clearfix w-100 d-md-none">
@@ -192,46 +170,9 @@
       </li>
     <% end %>
   </ul>
-  <!-- Call to action -->
+  
 
-
-  <hr>
-
-  <!-- Social buttons -->
-  <ul class="list-unstyled list-inline text-center">
-    <li class="list-inline-item">
-      <a class="btn-floating btn-fb mx-1">
-        <i class="fa fa-facebook"> </i>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a class="btn-floating btn-tw mx-1">
-        <i class="fa fa-twitter"> </i>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a class="btn-floating btn-gplus mx-1">
-        <i class="fa fa-google-plus"> </i>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a class="btn-floating btn-li mx-1">
-        <i class="fa fa-linkedin"> </i>
-      </a>
-    </li>
-    <li class="list-inline-item">
-      <a class="btn-floating btn-dribbble mx-1">
-        <i class="fa fa-dribbble"> </i>
-      </a>
-    </li>
-  </ul>
-  <!-- Social buttons -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> Adulting.com</a>
-  </div>
-  <!-- Copyright -->
+  
 
 </footer>
 <!-- Footer -->

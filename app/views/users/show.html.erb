@@ -1,13 +1,16 @@
 <div class="container">
 <h3>User</h3>
-<h4 class="adulting-name">Name: <%= @user.first_name %> <%= @user.last_name %></h4>
-<h4 class="adulting-username">Username: <%= @user.username %> </h4>
-<p class="adulting-picture"><img src="<%= @user.picture %>"/></p>
+
+<p>Name: <%= @user.first_name %> <%= @user.last_name %></p>
+<p>Username: <%= @user.username %> </p>
+<p>Picture: <%= image_tag "#{@user.picture}", class: "rounded-circle" %></p>
+
 
 
 <% if @user_score %>
 <div class="container">
- <div class="row col-12-sm justify-content-center" style="margin-bottom: 5rem;">
+
+ <div class="row col-12-sm text-center justify-content-center">
     <div class="d-flex flex-wrap">
       <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 35rem;">
         <div class="card-body">
