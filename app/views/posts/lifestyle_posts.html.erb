@@ -9,7 +9,7 @@
 <div class="stroke">
 <%= image_tag "#{post.post_pic}", class: "post-img card-img-top" %> 
 <div class="avatar">
-<%= image_tag "#{@user.picture}", class: "rounded-circle" %>
+<%= image_tag "#{post.user.picture}", class: "rounded-circle" %>
 <br></br>
 <section>
   <span class="published">Posted <%= time_ago_in_words(post.created_at) %> ago by</span>
