@@ -1,4 +1,5 @@
-<div class="new-post card">
+<div class="d-flex flex-wrap justify-content-center">
+<div class="new-post card top-m2">
 <%= bootstrap_form_with(model: @score, local: true) do |f| %>
 
 <%= f.select :finance, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], label: "Finance Adulting Score" %>
@@ -11,4 +12,5 @@
 <%= f.hidden_field(:user_id, value: "#{@user.id}") %>
 <%= f.submit({:class=> 'btn btn-outline-primary'}) %>
 <% end %>
+</div>
 </div>
