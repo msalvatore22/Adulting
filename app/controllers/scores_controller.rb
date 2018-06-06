@@ -17,7 +17,7 @@ class ScoresController < ApplicationController
 
   def edit
     @user = current_user
-    @score = @user.score
+    @score =  Score.find(params[:id])
   end
 
   def create
