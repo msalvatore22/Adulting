@@ -26,11 +26,15 @@
        <h6 class="card-subtitle mb-2 text-muted">Lifestyle: <%= @user_score.lifestyle %> out of 10</h6>
        <hr>
 
-       <%= link_to "Update Your Adulting Score!", edit_score_path %>
+       <%= link_to "Update Your Adulting Score!", edit_score_path(@user_score.id) %>
        </div>
    </div>
 <% else %>
+<div class="row">
+<div class="d-flex flex-wrap top-m2">
 <%= link_to "Create Your Adulting Score!", new_score_path %>
+</div>
+</div>
 <% end %>
 </div>
 <div class="row col-12-sm">
