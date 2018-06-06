@@ -1,6 +1,6 @@
 <div class="container">
 
-
+<% if @user_score %>
 <div class="user-pro container">
   <div class="row col-12-sm text-center justify-content-center">
    <div class="d-flex flex-wrap top-m2">
@@ -29,9 +29,9 @@
        <%= link_to "Update Your Adulting Score!", edit_score_path %>
        </div>
    </div>
-
+<% else %>
 <%= link_to "Create Your Adulting Score!", new_score_path %>
-
+<% end %>
 </div>
 <div class="row col-12-sm">
    <% @user.posts.reverse.each do |post| %>
