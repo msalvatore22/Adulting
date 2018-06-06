@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     if params[:search]
       @posts = Post.where('topic LIKE ?', "%#{params[:search]}%")
     else
-      @user = User.find_by(params[:id])
+      @user = current_user
       @posts = Post.all
     end
   end
