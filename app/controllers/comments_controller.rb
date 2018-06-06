@@ -20,9 +20,9 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @post = Post.find_by(params[:id])
+    @post = Post.find(params[:id])
     @comment = Comment.new(comment_params)
-    @user = User.find_by(params[:id])
+    @user = User.find(params[:id])
 
     if @comment.save
       redirect_to url_for(:controller => :posts, :action => :show, :id => @comment.post_id)
