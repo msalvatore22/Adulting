@@ -1,24 +1,19 @@
-# README
+# Adulting
+## This is a blogging website with the focus on helping people become better adults. Users are able to share their adulting sotries with everyone and receive feedback in comments and likes.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Tools Used:
+* CSS
+* Javascript
+* Bootstrap
+* Ruby on Rails
+* Devise
+* Search Kick
+* Active Record
+* Sqlite3
+* Postgres
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Features:
+* Ability to CRUD user accounts.
+* Ability to CRUD posts, comments and likes.
+* My adulting score allows a user to rate their own adulting skills.
