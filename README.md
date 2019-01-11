@@ -1,5 +1,5 @@
 # Adulting
-* This is a blogging website with the focus on helping people become better adults. Users are able to share their adulting sotries with everyone and receive feedback in comments and likes.
+* Adulting is a blogging website with the focus on helping people become better adults. Users are able to share their adulting sotries with everyone and receive feedback in comments and likes.
 
 ## Tools Used:
 * CSS
